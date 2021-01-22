@@ -71,6 +71,8 @@ nav a {
     text-align: center;
     justify-content: center;
     padding: 4px 10px;
+    font-size: 25px;
+    border: 1px solid grey;
 }
 
 .background-photo{
