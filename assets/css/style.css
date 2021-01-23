@@ -3,18 +3,20 @@
     box-sizing: border-box;
     margin: 0 50px;
     padding: 0;
-}  */
+    height: 100vh;
+}   */
 
 
 body {
-    background: whitesmoke;
+    background: pink;
     height: 100vh;
-    display: grid;
-    line-height: none;
-    font-size: none;
+    /* display: grid; */
+    /* line-height: none; */
+    /* font-size: none; */
     font-family: 'Hachi Maru Pop', cursive;
     /* font-family: 'Yusei Magic', sans-serif; */
     margin: 0px;
+ 
 
 } 
 
@@ -23,11 +25,13 @@ body {
 /* ------- navbar  */
 .navbar-nav .nav-link {
     margin: 10px 10px;
+
 }
 
 .navbar-expand-lg {
     padding-top: 0px;
     padding-bottom: 0px;
+    height: 60px;
 }
 
 nav a {
@@ -145,9 +149,27 @@ footer {
 }
 
 
+/* -------------------------------GAME PLAY----------------------------------- */
+
+/* -------------------------------IMAGES----------------------------------- */
+
+
+
 
 .memory-board-container {
-    background-color: #35156d;
+    background-color: #5265d1;
+    height: 80vh;
+}
+
+img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.game-body{
+   /* margin-left: 20px;
+    margin-right: 20px; */
 }
 
 .footer-game-container{

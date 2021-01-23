@@ -134,17 +134,11 @@ last column to make UX more legible.
 I used _Google inspect_ feature to choose the colours that would fit the page and match
 together, paying attention to both the contrast of the background color and the text
 in order to make it more legible.
-I decided to use mostly greyish and white colours with some dark red and dark blue.
-The footer dark red colours matches with the font colour in the navbar. Social links are white
-which also matches the navigation background as well as some of the sections’ backgrounds in the 
-pages. The reason for choosing the dark blue background of the last div sections was
-the bluish and dark (opaque overlay) background picture in _Home_ 
-and _Accommodation_ page.
+
 
 ##### Typography
 
-The _Amatic SC_ font is the main font used throughout the website with _Sans Serif_
-as the fall-back font in case if for reason the primary font isn't being imported into the site.
+ the main font used throughout the website with _Sans Serif_ as the fall-back font in case if for reason the primary font isn't being imported into the site.
 I used it for navbar, headings, jumbotron and divs which don't contain too much text.
 I used the _Roboto_ font for the larger group of texts, with _Sans Serif_
 as the fall-back.
