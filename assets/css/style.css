@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0 50px;
     padding: 0;
-} */
+}  */
 
 
 body {
@@ -12,8 +12,9 @@ body {
     display: grid;
     line-height: none;
     font-size: none;
-    /* font-family: 'Hachi Maru Pop', cursive; */
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Hachi Maru Pop', cursive;
+    /* font-family: 'Yusei Magic', sans-serif; */
+    margin: 0px;
 
 } 
 
@@ -82,6 +83,7 @@ nav a {
     border-radius: 4px;
     padding: 5px;
     margin: 0 auto;
+    opacity: 0.5;
 }
 
 /* .opaque-overlay {
@@ -108,12 +110,13 @@ nav a {
 /*  ------------------------------FOOTER-----------------------------------  */
 footer {
      background-color: #35156d;
-    color: white;
-    min-height: 40px;
-    margin: 0 auto;
+      color: white;
+    min-height: 50px;
+    margin: 0;
     text-align: center;
     font-size: 15px;
     padding-top: 20px;
+    font-family: 'Yusei Magic', sans-serif;
     
 }
 
@@ -139,4 +142,14 @@ footer {
 
 .copyright-text {
     font-size: 13px;
+}
+
+
+
+.memory-board-container {
+    background-color: #35156d;
+}
+
+.footer-game-container{
+    max-height: 40px;
 }
