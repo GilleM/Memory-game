@@ -206,22 +206,14 @@ img {
 @media (max-width: 1200px) and (min-width: 992px){   
     
     img {
-    width: 130px;
+    width: 137px;
 }
 
     .memory-board-container {
         padding-left: 10%;
         padding-right: 10%;
         }
-  .front-face{
-        /* margin-top: -100px; */
-        /* margin-left: 50px; */
-    }
 
-    .back-face {
-        /* margin-top: -100px; */
-        /* margin-left: 50px; */
-    }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
@@ -236,8 +228,23 @@ img {
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 767px) and (min-width: 576px){
+
+
+  img {
+    width: 90px;
+}
+
+    /* .memory-board-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 40px; 
+        } */
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
+
+     img {
+    width: 90px;
+}
 } 
