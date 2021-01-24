@@ -1,10 +1,10 @@
 
- * {
+ /* * {
     box-sizing: border-box;
     margin: 0 50px;
     padding: 0;
     height: 100vh;
-}   
+}    */
 
 
 body {
@@ -113,8 +113,8 @@ nav a {
 
 /*  ------------------------------FOOTER-----------------------------------  */
 footer {
-     background-color: #35156d;
-      color: white;
+    background-color: #35156d;
+    color: white;
     min-height: 50px;
     margin: 0;
     text-align: center;
@@ -148,123 +148,3 @@ footer {
     font-size: 13px;
 }
 
-
-/* -------------------------------GAME PLAY----------------------------------- */
-
-.game-body{
-  margin: 0px;
-  height: 100vh;
-}
-
-/* #main-section {
-    height: 100vh;
-    border: 4px solid black;
-    overflow: hidden;
-} */
-/* -------------------------------IMAGES----------------------------------- */
-/* .memory-board-container {
-    background-color: #5265d1;
-    height: 87vh;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 15px;
-    padding-bottom:10px; 
-}
-
-.memory-card {
-   position: relative;
-}
-
-.front-face{
-    margin-top: -49%;
-    /* border: 2px solid yellow; */
-    position: absolute;
-}
-
-.back-face {
-    margin-top: -49%;
-    /* border: 2px solid orange; */
-    position: absolute;
-} */
-
-/* .footer-game-container {
-    position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; 
-} */
-
-
-img {
-    width: 150px;
-}
-
-
-/* ------------------------MEDIA QUERIES-----------------
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 1200px) and (min-width: 992px){   
-    
-    img {
-    width: 137px;
-}
-
-    .memory-board-container {
-        padding-left: 10%;
-        padding-right: 10%;
-        
-        }
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 991px) and (min-width: 768px) {
-  img {
-    width: 115px;
-}
-
-    .memory-board-container {
-        padding-left: 5%;
-        padding-right: 5%;
-        }
-}
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 767px) and (min-width: 576px){
-
-
-  img {
-    width: 100px;
-}
-
-    .memory-board-container {
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 40px; 
-        }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
-
-    body{
-   margin-left: none;
-    margin-right: none;
-}
-/* #main-section {
-    height: 80vh;
-    border: 4px solid black;
-    overflow: hidden;
-    margin-top: 20%;
-} */
-     img {
-    width: 70px;
-}
-
-.memory-board-container {
-    background-color: #5265d1;
-    height: 70vh;
-    padding-left: none;
-    padding-right: none;
-  
-    
-}
-
-} 
