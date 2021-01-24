@@ -162,10 +162,6 @@ footer {
     overflow: hidden;
 }
 /* -------------------------------IMAGES----------------------------------- */
-
-
-
-
 .memory-board-container {
     background-color: #5265d1;
     height: 87vh;
@@ -181,17 +177,15 @@ footer {
 
 .front-face{
     margin-top: -49%;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     position: absolute;
 }
 
 .back-face {
     margin-top: -49%;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     position: absolute;
 }
-
-
 
 /* .footer-game-container {
     position: absolute;
@@ -211,9 +205,13 @@ img {
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 1200px) and (min-width: 992px){   
     
+    img {
+    width: 130px;
+}
+
     .memory-board-container {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 10%;
+        padding-right: 10%;
         }
   .front-face{
         /* margin-top: -100px; */
@@ -227,12 +225,14 @@ img {
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
-/* .memory-board-container {
-    padding-left: 10%;
-    padding-right: 10%;
-    }
+  img {
+    width: 115px;
+}
 
- */
+    .memory-board-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 767px) and (min-width: 576px){
