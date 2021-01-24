@@ -1,11 +1,30 @@
 
 /* -------------------------------GAME PLAY----------------------------------- */
 
+.navbar-nav .nav-link {
+    margin: 10px 10px;
+
+}
+
+
+nav a {
+    font-size: 2em;
+}
+
+.navbar-brand {
+    font-size: 1.7em;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.navbar-background{
+    background-color: #9c9fb39a;
+}
 .game-body{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     height: 100vh;
+    display: flex;
 }
 
 /* #main-section {
@@ -14,21 +33,25 @@
 /* -------------------------------IMAGES----------------------------------- */
 
 img {
-    width: 200px;
+    width: 220px;
 }
 
 #main-section {
     background-color: darksalmon;
-    height: 340px;
-    width: 600px;
+    height: 470px;
+    width: 700px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto; 
+    border: 3px solid red;
 }
 
 .memory-card {
     position: relative;
     width: 16.6666%;   
-    height: 20%;  
+    height: 20%;
+    /* margin: 10px; */
+     
    
 }
 .front-face{
@@ -39,7 +62,7 @@ img {
 .back-face {
     /* border: 2px solid orange; */
     position: absolute;
-     border: 1px solid darkcyan;
+ 
 }  
 
 /* .footer-game-container {
@@ -62,46 +85,37 @@ img {
 /* Large devices (desktops, 992px and up) */
 /* @media (max-width: 1200px) and (min-width: 992px){   
     
-    img {
-    width: 137px;
-}
 
-    .memory-board-container {
-        padding-left: 10%;
-        padding-right: 10%;
-        
-        } */
 
 /* Medium devices (tablets, 768px and up) */
-/* @media (max-width: 991px) and (min-width: 768px) {
-  img {
-    width: 115px;
+@media (max-width: 991px) and (min-width: 768px) {
+ .game-body{
+    display: block;
+ }
+#main-section {
+  
+    margin-top: 45px;
+    border: 3px solid red;
+} 
 }
-
-    .memory-board-container {
-        padding-left: 5%;
-        padding-right: 5%;
-        }
-} */
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 767px) and (min-width: 576px){
-
-
-  img {
-    width: 100px;
+.game-body{
+    display: block;
+ }
+ #main-section {
+  
+    margin-top: 80px;
+    border: 3px solid red;
+    height: 330px;
+    width: 500px;
+} 
 }
-
-    .memory-board-container {
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 40px; 
-        }
-}
-
+ 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
 
-    body{
+body{
    margin-left: none;
     margin-right: none;
 }
