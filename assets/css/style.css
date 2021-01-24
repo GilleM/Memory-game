@@ -31,7 +31,7 @@ body {
 .navbar-expand-lg {
     padding-top: 0px;
     padding-bottom: 0px;
-    height: 60px;
+    height: 80px;
 }
 
 nav a {
@@ -151,6 +151,16 @@ footer {
 
 /* -------------------------------GAME PLAY----------------------------------- */
 
+.game-body{
+   margin-left: 15%;
+    margin-right: 15%;
+}
+
+#main-section {
+    height: 100vh;
+    border: 4px solid black;
+    overflow: hidden;
+}
 /* -------------------------------IMAGES----------------------------------- */
 
 
@@ -158,20 +168,76 @@ footer {
 
 .memory-board-container {
     background-color: #5265d1;
-    height: 80vh;
+    height: 87vh;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15px;
+    padding-bottom:10px; 
 }
+
+.memory-card {
+   position: relative;
+}
+
+.front-face{
+    margin-top: -49%;
+    border: 2px solid yellow;
+    position: absolute;
+}
+
+.back-face {
+    margin-top: -49%;
+    border: 2px solid orange;
+    position: absolute;
+}
+
+
+
+/* .footer-game-container {
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+} */
+
 
 img {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 150px;
 }
 
 
-.game-body{
-   /* margin-left: 20px;
-    margin-right: 20px; */
+/* ------------------------MEDIA QUERIES-----------------
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) and (min-width: 992px){   
+    
+    .memory-board-container {
+        padding-left: 15%;
+        padding-right: 15%;
+        }
+  .front-face{
+        /* margin-top: -100px; */
+        /* margin-left: 50px; */
+    }
+
+    .back-face {
+        /* margin-top: -100px; */
+        /* margin-left: 50px; */
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) and (min-width: 768px) {
+/* .memory-board-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+
+ */
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) and (min-width: 576px){
 }
 
-.footer-game-container{
-    max-height: 40px;
-}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+} 
