@@ -50,17 +50,22 @@ img {
     position: relative;
     width: 16.6666%;   
     height: 20%;
-    /* margin: 10px; */
-     
-   
+    transform: scale(1);
 }
+
+.memory-card:active{
+  transform: scale(0.95); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transition: transform .1s;
+
+}
+
 .front-face{
     /* border: 2px solid yellow; */
     position: absolute;
 }
 
 .back-face {
-    border: 2px solid orange;
+    border: 2px ridge grey;
     position: absolute;
  
 }  
