@@ -9,10 +9,11 @@ function ready(){
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove ("visible")
+            let audioController = new AudioController();
+            audioController.startMusic();
             });    // WE STILL NEED TO INITIALISE THE GAME!!
+          
         });
-    
-
 // FLIPPING CARDS when we click it
     const cards = document.querySelectorAll('.memory-card');
 
@@ -22,10 +23,6 @@ function ready(){
     cards.forEach(card => card.addEventListener('click', cardFlip))
 }
 
-// First or second card
-let cardIsFLipped
-
-//Do the cards match?
 
 
 
@@ -39,3 +36,18 @@ if (document.readyState === "loading") {
 } else {
     ready
 }
+
+
+// background music set
+class AudioController {
+   constructor() {
+        this.backgroundMusic = new Audio ("assets/music/game_music.mp3");
+        this.backgroundMusic.volume = 0.5;
+        this.backgroundMusic.loop = true;
+   }
+
+   startMusic() {
+       this.backgroundMusic.play(); 
+   }
+}
+
