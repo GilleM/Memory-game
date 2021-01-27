@@ -1,28 +1,14 @@
-/* 
-* {
-    overflow: hidden;
-}     */
-
-
 body {
     background: pink;
     height: 100vh;
-    /* display: grid; */
-    /* line-height: none; */
-    /* font-size: none; */
     font-family: 'Hachi Maru Pop', cursive;
     /* font-family: 'Yusei Magic', sans-serif; */
     margin: 0px;
- 
-
 } 
 
-
-
-/* ------- navbar  */
+/* navbar  */
 .navbar-nav .nav-link {
     margin: 10px 10px;
-
 }
 
 .navbar-expand-lg {
@@ -58,14 +44,13 @@ nav a {
 .row-container {
     margin: 0px;
 }
+
 .play-game-container {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
     margin: 0;
     text-align: center;
     font-size: 20px;
- 
-    padding-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -96,17 +81,6 @@ nav a {
     background-color: rgba(0,0,0,0.4)
 } */
 
-/*  ------------------------------SOCIAL-----------------------------------  */
-
-/* .social-container{
-    min-height: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 10px;
-    padding-top: 10px;
-} */
-
-/* Footer */
 
 /*  ------------------------------FOOTER-----------------------------------  */
 footer {
@@ -119,26 +93,6 @@ footer {
     padding-top: 20px;
     font-family: 'Yusei Magic', sans-serif;
 }
-
-/* .blockquote-footer {
-    background: none;
-    margin-top: 0px;
-} */
-
-/* .social-links li a i {
-    font-size: 1.3rem;
-    color: #000000;
-    padding: 5px;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-}
-
-.social-links li a i:hover {
-    color: grey;
-} */
-
 
 .copyright-text {
     font-size: 13px;

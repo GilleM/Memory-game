@@ -7,3 +7,9 @@ function cardFlip() {
 }
 
 cards.forEach(card => card.addEventListener('click', cardFlip))
+
+
+// 
+let cardIsFLipped
+
+//Do the cards match
