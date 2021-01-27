@@ -1,7 +1,7 @@
 body {
     background: pink;
     height: 100vh;
-    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Hachi Maru Pop', cursive, sans-serif;
     /* font-family: 'Yusei Magic', sans-serif; */
     margin: 0px;
 } 
