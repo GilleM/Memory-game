@@ -1,4 +1,4 @@
-  html{  min-height: 100vh;}
+  /* html{  min-height: 100vh;} */
 
 
 body{
@@ -9,6 +9,8 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
+      font-family: 'Hachi Maru Pop', cursive, sans-serif;
+    /* font-family: 'Yusei Magic', sans-serif; */
 }
 
 
@@ -128,16 +130,65 @@ img {
 
 
 
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.game-info {
+    color: darkgreen;
+    font-size: 2em;
+}
 
 
 
+    .game-container {
+      
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+  
+        width: 90%;
+    } 
 
+/* ------------------------MEDIA QUERIES----------------- */
 
+@media (max-width: 1366px) and (min-width: 1201px){   
+    .game-container {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 320px;
+        margin-right: 50px;
+        /* margin-left: 0;
+        margin-right: 0; */
+        z-index: 25;
+        width: 50%;
+    } 
+}
+@media (max-width: 1200px) and (min-width: 992px){   
+    .game-container {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 300px;
+        margin-right: 30px;
+        /* margin-left: 0;
+        margin-right: 0; */
+        z-index: 25;
+        width: 62%;
+    } 
+}
+  /* <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div> */
 
-
-
-
-/* ------------------------MEDIA QUERIES-----------------
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {

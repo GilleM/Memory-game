@@ -8,31 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style2.css" type="text/css">
-    <!-- Favicon remove: -->
+       <!-- Favicon remove: -->
     <link rel="shortcut icon" href="#" /> 
+    <link rel="stylesheet" href="assets/css/style2.css" type="text/css">
+    <!-- script async (js file will be loaded as the same time as html -->
+    <script src="assets/script/app.js" async></script>
+ 
     <title>Memory game</title>
 </head>
 
 <body>
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-background">
-  <a class="navbar-brand" href="index.html">Memory game</a> 
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-background">
+        <a class="navbar-brand" href="index.html">Memory game</a> 
+    </nav>
 
-<!-- Overlays -->
-<div class="overlay-text visible">
-    Click to Start
-  </div>
-  <div id="game-over-text" class="overlay-text">
-    GAME OVER
-    <span class="overlay-text-second">Click to Restart</span>
-  </div>
-  <div id="victory-text" class="overlay-text">
-    VICTORY
-    <span class="overlay-text-second">Click to Restart</span>
-  </div>
+    <!-- Overlays -->
+    <!-- Promjeni hidden u visible kod CLick to Start prije nego kreneš-->
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-second">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        CONGRATULATIONS, YOU WON!
+        <span class="overlay-text-second">Click to Restart</span>
+    </div>
+
+    <!-- Time and Flip -->
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                 Flips <span id="flips"> 0</span>
+            </div>
+            <div class="game-info">
+               <span id="time-remaining"> <i class="fa fa-hourglass"></i>  100</span>
+            </div>
+        </div>
+    </div>
 
 <!-- Memory container -->
 <section id="memory-main-container">
@@ -138,8 +154,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- <script src="assets/script/memory.js"></script> -->
-    <script src="assets/script/app.js"></script>
+
 
 </body>
 </html>
