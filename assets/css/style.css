@@ -4,6 +4,7 @@ body {
     font-family: 'Hachi Maru Pop', cursive, sans-serif;
     /* font-family: 'Yusei Magic', sans-serif; */
     margin: 0px;
+    position: relative;
 } 
 
 /* navbar  */
@@ -32,13 +33,27 @@ nav a {
     justify-content: space-between;
 } */
 
+
+/* Play button */
+#playbutton {
+    margin: auto;
+    z-index: 10;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* ------- main container */
 
 
 .main-container {
     padding: 15px 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .row-container {
@@ -92,6 +107,8 @@ footer {
     font-size: 15px;
     padding-top: 20px;
     font-family: 'Yusei Magic', sans-serif;
+    position: absolute;
+    bottom: 0;
 }
 
 .copyright-text {

@@ -47,7 +47,7 @@
 
 <div class="container-fluid main-container">
 <!-- <div class="opaque-overlay">&nbsp; -->
-    <div class="row justify-content-center align-items-start row-container">
+    <div class="row justify-content-center align-items-center row-container">
         <div class="col-6">
             <img class="background-photo img-fluid" src="assets/images/memory_pic_6.jpg" alt="background photo">
         </div>
@@ -79,6 +79,12 @@
         </div>
     </div>
 </div>
+
+
+<!-- Button trigger modal -->
+<button type="button" id= "playbutton" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Play
+</button>
 
 
 <!-- Social links
@@ -126,6 +132,28 @@
         </div>       
     </div>
 </footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--scripts-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
