@@ -15,7 +15,12 @@
 </head>
 <body>
 
-<!-- lIGHT/DARK MODE -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Memory game</a>
+</nav>
+
+<!-- Light/dark mode -->
 <div class="theme-switch-wrapper">
     <span id="toggle-icon">
         <span class="toggle-text">Light Mode
@@ -28,48 +33,28 @@
     </label>
 </div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">Memory game</a>
-</nav>
-
-
 <!-- Main container -->
 <div class="container-fluid main-container">
     <div class="row justify-content-center align-items-center row-container">
         <div class="col-5">
             <img class="background-photo img-fluid" src="assets/images/main_photo.JPG" alt="background photo">
         </div>
-        <!-- How to play button -->
-        <div class="col-md-12 play-game-container">
-            <button type="button" class="btn active play-game-button" data-toggle="modal" data-target="#exampleModalLong">
-            How to play?
-            </button>
-       </div>
     </div>
 </div>
 
- <!-- Modal of "How to play" button-->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Memory game rules</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Object of the game is to find all pairs of matching cards in the least moves possible.
-                    <br> A player makes a match if the two cards turned picture-side-up are identical. <br>
-                There are three level of difficuties, so choose the one you find enjoyable.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+<!-- Play Button trigger modal -->
+<button type="button" id= "playbutton" class="btn btn-light play-button" data-toggle="modal" data-target="#playButtonCenter">
+  Play
+</button>
+
+<!-- How to play button trigger modal -->
+
+<div class="col-md-12 play-game-container">
+    <button type="button" class="btn active btn-light how-to-button" data-toggle="modal" data-target="#howToButtonLong">
+    How to play?
+    </button>
 </div>
+
 
 
 <!-- Social links
@@ -118,18 +103,13 @@
     </div>
 </footer>
 
-<!-- PLAY BUTTON !!!!!!!!!! -->
-<!-- Play Button trigger modal -->
-<button type="button" id= "playbutton" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
-  Play
-</button>
 
 <!-- Modal of Play button-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="playButtonCenter" tabindex="-1" role="dialog" aria-labelledby="playButtonCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Choose the difficulty level</h5>
+        <h5 class="modal-title" id="playButtonLongTitle"> Choose the difficulty level</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -149,7 +129,28 @@
   </div>
 </div>
 
-    <!-- toggle button on Navbar-->
+<!-- Modal of "How to play" button-->
+<div class="modal fade" id="howToButtonLong" tabindex="-1" role="dialog" aria-labelledby="howToButtonLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="howToButtonLongTitle">Memory game rules</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Object of the game is to find all pairs of matching cards in the least moves possible.
+                    <br> A player makes a match if the two cards turned picture-side-up are identical. <br>
+                There are three level of difficuties, so choose the one you find enjoyable.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
