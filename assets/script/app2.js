@@ -1,3 +1,21 @@
+const cards = document.querySelectorAll('.memory-card');
+
+//new FlipAndTime (60, cardsArray)
+//class FlipAndTime {
+   // constructor(totalTime, cards) {
+    //    let cards = document.querySelectorAll('.memory-card');
+
+    //    this.cardsArray = cards;
+    //    this.totalTime = totalTime;
+    //    this.timeRemaining = totalTime;
+    //    this.timer = document.getElementById('timer')
+    //    this.ticker = document.getElementById('flips');
+
+    //}
+//}
+
+
+
 // background music set
 class AudioController {
    constructor() {
@@ -42,13 +60,43 @@ function ready(){
     
 // FLIPPING CARDS when we click it (HTML collection)
     const cards = document.querySelectorAll('.memory-card');
+    
+    let theCardIsFlipped, firstCard, secondCard;
 
     function cardFlip() {
-        this.classList.toggle("flip");
+        this.classList.add("flip");
+
+        if (!theCardIsFlipped) {
+            // first click
+            theCardIsFlipped = true;
+            firstCard = this;
+        } else {
+            // second click
+            theCardIsFlipped = false;
+            secondCard = this; 
+
+            if (firstCard.dataset.framework === secondCard.dataset.framework) {
+            // both cards are matching
+                firstCard.removeEventListener('click', cardFlip);
+                secondCard.removeEventListener('click', cardFlip);
+            } else {
+            // not a match
+            //setTimeout introduced because it removed flip class from the second card before we opened it
+                setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+            }, 900);
         }
+    }
+    }
     cards.forEach(card => card.addEventListener('click', cardFlip))
     }
     //game.cardFLip(card)
+
+
+
+  
+
 
 //if the html page hasn't loaded yet, wait for the page to get loaded and then call the function ready()
 
