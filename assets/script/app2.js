@@ -1,7 +1,34 @@
-const cards = document.querySelectorAll('.memory-card');
 
+// Setting up Timer and Flips
+//new FlipAndTime (60, cardsArray)
+class FlipAndTime {
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timeRemaining = totalTime;
+        this.timer = document.getElementById('time-remaining')
+        this.ticker = document.getElementById('flips');
+}
 
+startGame(){
+        this.totalClicks = 0;
+        this.timeRemaining = this.totalTime;
+        this.cardToCheck = null;
+        this.matchedCards = [];
+        this.busy = true;
+        this.timeRemaining = 0;
+    } 
+flipsCounter(card) {
+    if (this.canFlipCard(card)) {
+        this.totalClicks++;
+        this.ticker.innerText = this.totalClicks;
+    }
 
+}
+canFlipCard (card) {
+    return true;
+}
+}
 // background music set
 class AudioController {
    constructor() {
@@ -10,56 +37,64 @@ class AudioController {
         this.backgroundMusic.loop = true;
    }
 
-   startMusic() {
-       this.backgroundMusic.play(); 
-   }
-   stopMusic() {
-       this.backgroundMusic.pause();
-       this.backgroundMusic.currentTime=0; 
-   }
-   victory() {
-       this.stopMusic(); 
-   }
-   gameOver() {
-       this.stopMusic();
-   }
+    startMusic() {
+        this.backgroundMusic.play(); 
+    }
+    stopMusic() {
+        this.backgroundMusic.pause();
+        this.backgroundMusic.currentTime=0; 
+    }
+    victory() {
+        this.stopMusic(); 
+    }
+    gameOver() {
+        this.stopMusic();
+    }
 }
 
 
 
 // GRABBING OVERLAYS and CARD FROM THE DOM 
 // 3 overlays: START, GAME OVER, VICTORY
-// decided not to go with HTML collection in order to have access to JavaScript array functions
 function ready(){
 //makes array of elements
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
+    let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
+    let game = new FlipAndTime (cardsArray, 60);
     
-// looping over overlay arrays 
+ 
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.classList.remove ("visible")
-            let audioController = new AudioController();
-            audioController.startMusic();
-            });    // WE STILL NEED TO INITIALISE THE GAME!!
+            overlay.classList.remove ("visible");
+            //let audioController = new AudioController();
+            //audioController.startMusic();
+            game.startGame();
+            });   
         });
-//================================================================================
 
-    const cards = document.querySelectorAll('.memory-card');
+        cardsArray.forEach(card => {
+        card.addEventListener('click', () => {
+            game.flipsCounter(card);
+            });   
+        });
+    
+//=============================================================================
+
+const cards = document.querySelectorAll('.memory-card');
+
+let theCardIsFlipped;
+let firstCard, secondCard;
+// lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
+let lockBoard = false;
 
         
 // FLIP CARDS
-    let theCardIsFlipped;
-    let firstCard, secondCard;
-// lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
-    let lockBoard = false;
+function cardFlip() {
+    if (lockBoard) return;
 
-    function cardFlip() {
-        if (lockBoard) return;
         // double click on the card
-        if (this === firstCard) return;
+    if (this === firstCard) return;
         this.classList.add("flip");
-        
-
         if (!theCardIsFlipped) {
             // first click
             theCardIsFlipped = true;
@@ -71,34 +106,39 @@ function ready(){
             cardMatch()
         }
         }
-
-    function cardMatch(){
-         if (firstCard.dataset.framework === secondCard.dataset.framework) {
-            // both cards are matching
-                firstCard.removeEventListener('click', cardFlip);
-                secondCard.removeEventListener('click', cardFlip);
-                resetBoard();
-            } else {
-            // NOT a match
-            //setTimeout introduced because it removed flip class from the second card before we opened it
-            notFlipped();
+        
+function cardMatch(){
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disabled();
+    } else {
+        notFlipped();
     }
  }
 
- function notFlipped () {
-        lockBoard = true;
-        setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-        lockBoard = false;
-        resetBoard();
+// both cards are matching
+ function disabled (){
+    firstCard.removeEventListener('click', cardFlip);
+    secondCard.removeEventListener('click', cardFlip);
+    resetBoard();
+ }
+
+// NOT a match
+//setTimeout introduced because it removed flip class from the second card before we opened it
+function notFlipped () {
+    lockBoard = true;
+    setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+    lockBoard = false;
+    resetBoard();
     }, 700);
 }
+
 
 function resetBoard() {
   theCardIsFlipped = false;
   lockBoard = false;
-  firstCard = null, null;
+  firstCard = null;
   secondCard = null;
 }
 
