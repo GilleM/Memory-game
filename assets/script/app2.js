@@ -6,29 +6,46 @@ class FlipAndTime {
         this.cardsArray = cards;
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
+        this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
 }
 
 startGame(){
         this.totalClicks = 0;
-        this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
-        this.timeRemaining = 0;
+        this.timeRemaining = this.totalTime;
+
+        setTimeout(() => {
+            //this.audioController.startMusic();
+            this.shuffleCards();
+            this.countDown = this.startCountDown();
+            this.busy = false;
+        }, 500);
     } 
+
+        shuffleCards(card) {
+            const cards = document.querySelectorAll('.memory-card');
+            cards.forEach(card => {
+            let randNumber = Math.floor(Math.random() * 24);
+            card.style.order = randNumber;
+        });
+
+}
 flipsCounter(card) {
     if (this.canFlipCard(card)) {
         this.totalClicks++;
         this.ticker.innerText = this.totalClicks;
+        
     }
-
 }
-canFlipCard (card) {
+canFlipCard(card) {
     return true;
 }
 }
+
+
 // background music set
 class AudioController {
    constructor() {
@@ -66,8 +83,8 @@ function ready(){
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove ("visible");
-            //let audioController = new AudioController();
-            //audioController.startMusic();
+            let audioController = new AudioController();
+            audioController.startMusic();
             game.startGame();
             });   
         });
@@ -144,12 +161,6 @@ function resetBoard() {
 
 //Immediately Invoked Function Expression
 //This function will be exacuted right after its definition
-(function shuffleCards() {
-  cards.forEach(card => {
-    let randNumber = Math.floor(Math.random() * 24);
-    card.style.order = randNumber;
-  });
-})();
 
 cards.forEach(card => card.addEventListener('click', cardFlip))
 }
