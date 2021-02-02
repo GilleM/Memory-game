@@ -50,11 +50,15 @@ function ready(){
 // FLIP CARDS
     let theCardIsFlipped;
     let firstCard, secondCard;
+// lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
     let lockBoard = false;
 
     function cardFlip() {
         if (lockBoard) return;
+        // double click on the card
+        if (this === firstCard) return;
         this.classList.add("flip");
+        
 
         if (!theCardIsFlipped) {
             // first click
@@ -73,6 +77,7 @@ function ready(){
             // both cards are matching
                 firstCard.removeEventListener('click', cardFlip);
                 secondCard.removeEventListener('click', cardFlip);
+                resetBoard();
             } else {
             // NOT a match
             //setTimeout introduced because it removed flip class from the second card before we opened it
@@ -86,16 +91,28 @@ function ready(){
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         lockBoard = false;
-    }, 900);
+        resetBoard();
+    }, 700);
 }
 
-    cards.forEach(card => card.addEventListener('click', cardFlip))
-    }
-    //game.cardFLip(card)
+function resetBoard() {
+  theCardIsFlipped = false;
+  lockBoard = false;
+  firstCard = null, null;
+  secondCard = null;
+}
 
+//Immediately Invoked Function Expression
+//This function will be exacuted right after its definition
+(function shuffleCards() {
+  cards.forEach(card => {
+    let randNumber = Math.floor(Math.random() * 24);
+    card.style.order = randNumber;
+  });
+})();
 
-
-  
+cards.forEach(card => card.addEventListener('click', cardFlip))
+}
 
 
 //if the html page hasn't loaded yet, wait for the page to get loaded and then call the function ready()
