@@ -17,7 +17,7 @@ startGame(){
         this.timeRemaining = this.totalTime;
 
         setTimeout(() => {
-            //this.audioController.startMusic();
+            this.audioController.startMusic();
             this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -100,8 +100,8 @@ function ready(){
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove ("visible");
-            let audioController = new AudioController();
-            audioController.startMusic();
+            //let audioController = new AudioController();
+            //audioController.startMusic();
             game.startGame();
             });   
         });
