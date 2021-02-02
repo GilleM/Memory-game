@@ -94,7 +94,19 @@ function ready(){
 //makes array of elements
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
-    let game = new FlipAndTime (10, cardsArray);
+      let game;
+
+    const pathName = window.location.pathname;
+    const gameType =  pathName.indexOf("easy") !== -1 ? "EASY" : 
+                      pathName.indexOf("hard") !== -1 ? "HARD" : "MEDIUM";
+
+    if(gameType === "EASY"){
+       game =  new FlipAndTime (200, cardsArray);
+    }  else if(gameType === "MEDIUM"){
+       game =  new FlipAndTime (100, cardsArray);
+    }   else if(gameType === "HARD"){
+       game =  new FlipAndTime (60, cardsArray);
+    }
     
  
     overlaysArray.forEach(overlay => {
