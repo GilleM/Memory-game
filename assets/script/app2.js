@@ -1,6 +1,4 @@
-
 // Setting up Timer and Flips
-//new FlipAndTime (60, cardsArray)
 class FlipAndTime {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
@@ -8,6 +6,7 @@ class FlipAndTime {
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
+        this.audioController = new AudioController;
 }
 
 startGame(){
@@ -25,14 +24,14 @@ startGame(){
         }, 500);
     } 
 
-        shuffleCards(card) {
-            const cards = document.querySelectorAll('.memory-card');
-            cards.forEach(card => {
-            let randNumber = Math.floor(Math.random() * 24);
-            card.style.order = randNumber;
-        });
-
+shuffleCards(card) {
+    const cards = document.querySelectorAll('.memory-card');
+    cards.forEach(card => {
+    let randNumber = Math.floor(Math.random() * 24);
+    card.style.order = randNumber;
+    });
 }
+
 flipsCounter(card) {
     if (this.canFlipCard(card)) {
         this.totalClicks++;
@@ -43,6 +42,21 @@ flipsCounter(card) {
 canFlipCard(card) {
     return true;
 }
+
+startCountDown() {
+    return setInterval(() => {
+        this.timeRemaining--;
+        this.timer.innerText = this.timeRemaining;
+        if(this.timeRemaining === 0)
+            this.gameOver();
+    }, 1000);
+}
+
+gameOver() {
+    clearInterval(this.countDown);
+    document.getElementById("game-over-text").classList.add("visible");
+    this.audioController.gameOver();
+}
 }
 
 
@@ -50,7 +64,9 @@ canFlipCard(card) {
 class AudioController {
    constructor() {
         this.backgroundMusic = new Audio ("assets/music/game_music.mp3");
+        this.gameOverSong = new Audio ("assets/music/game_over_song.mp3")
         this.backgroundMusic.volume = 0.5;
+        this.gameOverSong.volume = 0.2;
         this.backgroundMusic.loop = true;
    }
 
@@ -59,13 +75,14 @@ class AudioController {
     }
     stopMusic() {
         this.backgroundMusic.pause();
-        this.backgroundMusic.currentTime=0; 
+        this.backgroundMusic.currentTime = 0; 
     }
     victory() {
         this.stopMusic(); 
     }
     gameOver() {
         this.stopMusic();
+        this.gameOverSong.play();
     }
 }
 
@@ -77,7 +94,7 @@ function ready(){
 //makes array of elements
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
-    let game = new FlipAndTime (cardsArray, 60);
+    let game = new FlipAndTime (10, cardsArray);
     
  
     overlaysArray.forEach(overlay => {
