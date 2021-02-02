@@ -1,19 +1,5 @@
 const cards = document.querySelectorAll('.memory-card');
 
-//new FlipAndTime (60, cardsArray)
-//class FlipAndTime {
-   // constructor(totalTime, cards) {
-    //    let cards = document.querySelectorAll('.memory-card');
-
-    //    this.cardsArray = cards;
-    //    this.totalTime = totalTime;
-    //    this.timeRemaining = totalTime;
-    //    this.timer = document.getElementById('timer')
-    //    this.ticker = document.getElementById('flips');
-
-    //}
-//}
-
 
 
 // background music set
@@ -56,14 +42,18 @@ function ready(){
             audioController.startMusic();
             });    // WE STILL NEED TO INITIALISE THE GAME!!
         });
+//================================================================================
 
-    
-// FLIPPING CARDS when we click it (HTML collection)
     const cards = document.querySelectorAll('.memory-card');
-    
-    let theCardIsFlipped, firstCard, secondCard;
+
+        
+// FLIP CARDS
+    let theCardIsFlipped;
+    let firstCard, secondCard;
+    let lockBoard = false;
 
     function cardFlip() {
+        if (lockBoard) return;
         this.classList.add("flip");
 
         if (!theCardIsFlipped) {
@@ -74,21 +64,31 @@ function ready(){
             // second click
             theCardIsFlipped = false;
             secondCard = this; 
+            cardMatch()
+        }
+        }
 
-            if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    function cardMatch(){
+         if (firstCard.dataset.framework === secondCard.dataset.framework) {
             // both cards are matching
                 firstCard.removeEventListener('click', cardFlip);
                 secondCard.removeEventListener('click', cardFlip);
             } else {
-            // not a match
+            // NOT a match
             //setTimeout introduced because it removed flip class from the second card before we opened it
-                setTimeout(() => {
-                firstCard.classList.remove('flip');
-                secondCard.classList.remove('flip');
-            }, 900);
-        }
+            notFlipped();
     }
-    }
+ }
+
+ function notFlipped () {
+        lockBoard = true;
+        setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        lockBoard = false;
+    }, 900);
+}
+
     cards.forEach(card => card.addEventListener('click', cardFlip))
     }
     //game.cardFLip(card)
