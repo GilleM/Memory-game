@@ -6,22 +6,22 @@
 
 Welcome to my first Code Institute milestone project that you can check out by clicking on the photo below:
 
-[![Foo](assets/images/back_face.jpg)](https://gillem.github.io/Memory-game/)
+[![Foo](assets/images/back_face.jpg)](https://gillem.github.io/Memory-game//)
 
 
 
 ## Project Description
 ***
-**Memory game** is my second out of four milestone projects at the Code Institute 
-Full Stack Developer course.
+**Memory game** is my second out of four milestone projects at the Code Institute Full Stack Developer course.
 The main requirements were to design, develop and implement front-end web application using HTML, CSS and JavaScript. 
 It was also required to implement front-end interactivity, using core JavaScript, JavaScript libraries and/or APIs.
 Everything needed to be tested  through development, implementation and deployment stages.
 
-The reason I decided to go with _Memory game_ is simply because I like (arcade) games. I found this project would be good 
-and at the same time challenging for a JavaScript beginner. According to study of International Psychogeriatrics 2016, 
+According to study of International Psychogeriatrics 2016, 
 memory games help sharpen certain  thinking skills that tend to wane with age, such as processing speed, planning skills, 
-reaction time, decision making, and short-term memory, so I decided it give it a go with it.
+reaction time, decision making, and short-term memory.
+
+The reason why I decided to go with _Memory game_ is simply because I like fun brain games whose rules is not difficult to understand and follow, but they still require concentration. I am of the opinion that the Memory game project was entertaining and at the same time challenging for a JavaScript beginner, such as I am.
 
 
 
@@ -43,11 +43,11 @@ including aspects of branding, design, usability and function."_
 
 ### Project Goals
 
-- to create a website that is fully responsive on mobiles, laptops, tablets and desktops,
-- to make a page with interface design, providing a logical structure which is easy to follow,
-- to write interactive JavaScript code to produce relevant responses to user actions
+- to create a website that is fully responsive on mobiles, tablets, laptops and desktops,
+- to make a page with interface design, providing a logical structure which is easy to follow (memory board game in the middle of the page, different toggles that help user to information ("How to play?" button)
+- to write interactive JavaScript code to produce relevant responses to user's actions (light-dark mode for index page, flipping and matching the card, card counter (flips), timer, music and various overlays depending of the outcome of the game (win or loss))
 - to understand the code and to possibly implement it in another project
-- to make an interesting, enjoyable page that could be played by children and adults as well
+- to make an interesting, enjoyable page that could be played by children and adults as well and possibly get engaged in some private competition during free time (especially during lock down)
 
 ### The business goals of this website is:
 
@@ -56,131 +56,162 @@ people by memory card playing
 
 ### User Stories
 
-- as a new user who never played memory, I want to have access to the memory rules.
+- as a new user who never played memory, I want to have access to the memory rules,
 - as a new user, I want to see nicely developed game with logical characteristic (2 matching cards appear, other stay closed)
-- as a young user, I want to have possiblity to play with a smaller number of cards
-- as a user, I'd like the page to be enjoyable and I'd like to have fun with playing it
-- as a user, I'd like to have the highest score to be saved
+- as a young user, I want to have more time to find all the cards 
+- as a competitive user, I'd like to have different levels of complexity 
+- as a user, I'd like the pictures to be nice and funny and the page to be enjoyable. I'd like to have fun with playing it
+
 
 ## Strategy
 
 The main goal of the website is for younger and older generations to have fun playing memory game.
 My personal goal was to well understand the JavaScript logic and to prove myself that I could do my first game.
-My goal in design was to make everything as structured and intuitive as possible. I didn't introduce
-a lot of text this time; I mostly put the accent on the very interactivity of the page; with images, flipping the cards 
-around, matchin them, displaying result... I have also decided not to introduce any social link for the purpose of the game, 
-since I wanted to have the UX simple and put the accent on the game. UX is easy to read and to follow.
-
 
 
 ## Scope
-I certainly had a scope creep; all the features I wanted to add but that weren't agreed on at the starting point. 
-In order to meet the deadline with this milestone, I needed to make it simpler. 
-I decided to have a grid of cards (all of them taken from Unsplash), and to distribute them evenly on the page, at
-the same take taking care about responsiveness, so that the data in nicely loaded and presented in phone and tablet view.
-I decided to introduce interactive "Let's play" button.
-I decided to introduce interactive "Play/Resume" button.
+My goal in design was to make everything as structured and intuitive as possible. I didn't introduce a lot of text but instead I put the accent on the very interactivity of the page; with images, flipping and matching cards, flip counter, timer, music, overlays, light-night switch button... I have also decided not to introduce any social links since I wanted to have the UX simple, easy to read and to follow.
+
+I certainly had a scope creep with all the features I wanted to add but that weren't agreed on at the starting point. 
+
 
 
 ## Structure
-All the pages have a fixed **navbar** with "Kilbronogue trip" logo I created just for the 
-purpose of the page.
 
-At the bottom of the page I put a **footer** with social links and copyright text.
 
-* First - _Home_ page, has a jumbotron with the quote in it, followed by "About me" section which
-is, again, followed by some activities photos with text. 
-* Second - _Gallery_ page, is separated in three divs, each one containing photos
-with different subjects. _Nature_, _With animals_ and _Food we made_. I colored the last div's
-background differently on purpose, in order to divide it semantically from the first two divs which both represent
-nature (flora or fauna). To reduce the width of the page and to make it more structured and nicer, I introduced 
-_overflow_ element.
-* In the third - _Accommodation_ page, I introduced _form_ and _map_ sections and it's the only 
-page that has a _table_, so it's a bit more diverse. I decided to put more 
-history text, strongly related to Kilbronogue place and which might
-attract people in coming to Ireland and visiting West Cork.
+My users are people wanting to have fun, whether is it about younger or older people, so I needed to make the site concise, simple and fun.
+I decided to go with 100vh height and completely omit scroll bar (followed the logic "what is get is what you see").
 
-## Skeleton
-##### Wireframe
-By using Balsamiq, I developed the wireframes for each page, for mobile, tablet and laptop/desktop size.
-I added the colours in the next step and coloured the background of some sections.
 
-You can click on one of the following links below:
+ _Index.html_ page:
+*   **navbar** is always on the top, kept simply white.
+Inscription "Memory game" suggest the title of the game itself and there's a toggle light switch button introduced on the right.
 
-[LARGE SIZE wireframe](https://gillem.github.io/Kilbronogue_trip/assets/wireframes/Wireframe_large_screen.html)
+* The **central part** is composed of the main photo (that mimics the memory game with some photos open) and two toggle buttons: the one in the center of the page (and picture) that invites users to play the game and the one below with "How to play" inscription.
 
-[MEDIUM SIZE wireframe](https://gillem.github.io/Kilbronogue_trip/assets/wireframes/Wireframe_medium_screen.html)
+* **Footer** consists of the basic text, without any social links in order to keep UX simple. The purple color matched the round slider in light switch toggler that is in navbar, so like that I wanted to introduce some "color semantics" into the page.
 
-[EXTRA-SMALL wireframe](https://gillem.github.io/Kilbronogue_trip/assets/wireframes/Wireframe_extra_small_screen.html)
+
+Other (_easy.html_, _medium.html_ and _hard.html_) pages:
+*   Depending on the view, the **navbar** shifts: on the large screens it stays on the left while for the other screens stays on the top. The light switch toggle has been removed and the "Memory game" inscription is changed to "Back to menu".
+
+* The **central part** of the page is composed of the grid of cards which are evenly distribute on the page and are made with full responsiveness so that the data is nicely loaded and presented on the phone, tablet and desktop view.
+  - I decided to introduce different back memory card picture for every difficulty, going from the practically plane picture to the one with most details (cherry) that can be seen in the hardest level. The mentioned is done on purpose, to distract a user a bit and to make the game more challenging.
+  - The flips are introduced that count how many times the cards have been flipped
+  - The timer shows different second for different levels: 120 seconds for beginner, 90 for medium and 60 for hard level.
+  - The background is taken from Herro Pattern - "Signal" Pattern
+
+* The **footer** has been completely removed.
+
+
+
+## Skeleton       NOT FINISHED!!!!!!!!!!
+### Wireframe
+I used Balsamiq to developed the wireframes for mobile, tablet and laptop/desktop size. 
+
+You can check them by clicking on one of the following links:
+
+
+
++ [Desktop size](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_large_screen.html)
+
++ [Tablet size ](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_medium_screen.html)
+
++ [Phone size ](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_extra_small_screen.html)
+
 
 ## Surface
-After finishing with the Skeleton plane of user experience, I started with 
-the Surface plan, the most concrete plan of all five of them. 
-I tried to accomplish the following tasks: how can the users interact, what effects are there,
- what they can click, where they can go to, and also the final version of the 
- information that appears on the screen.
 
-I wanted to provide readability and make my content legible.
-I also try to have consistent patterns, e.g. the navbar and header section 
-and the footer section are consistent across the pages, while for the bigger text
-I decided to go with the font that contains the lowercase as well, which the main font
-doesn't provide.
-I used the form, map, buttons and table. In phone responsiveness, I decided to remove the 
-last column to make UX more legible.
+- color, layout, fonts, images, order and sequence, and the site's identity.
+
+I wanted to give the least amount of information but to pass the correct information. I removed all the additional text or possible content for which I thought would be redudant on the page: the game itself was the most important.
+
+I played with designs and pictures; I certainly wanted to have all the pages vivid and funny but I tried to keep some consistent colors, e.g. the round slider and the footer. I tried to have the right contrast between background and other elements on the page.
+
+In phone responsiveness, I decided to remove the toggle button to make UX more legible.
 
 
-##### Colour Scheme
+### Colour Scheme
 
-I used _Google inspect_ feature to choose the colours that would fit the page and match
-together, paying attention to both the contrast of the background color and the text
-in order to make it more legible.
+The patterns are taken from [Hero Patterns](https://www.heropatterns.com/) page. 
 
 
-##### Typography
+The background colors and the patterns for _index.html_ page are the following:
 
- the main font used throughout the website with _Sans Serif_ as the fall-back font in case if for reason the primary font isn't being imported into the site.
-I used it for navbar, headings, jumbotron and divs which don't contain too much text.
-I used the _Roboto_ font for the larger group of texts, with _Sans Serif_
-as the fall-back.
+Light mode:
++ color: #daf4f4
++ pattern: Morphing Diamonds
 
-##### Imagery
+[![Foo](assets/images/bg1.JPG)](https://gillem.github.io/Memory-game//)
 
-I used transition to each activity section containing header, text and image in the _Home_ page.
+Dark mode:
++ color:  #142d2d;
++ pattern: Morphing Diamonds
 
-The majority of photographs are taken by me during my stay in Kilbronogue.
-The ones I was missing, like the norwegian mythology photo I took from [Unsplash site](https://www.lifeinnorway.net/norwegian-mythology-folk-tales/) 
-and the accommodation background photo I found on very gifted illustrator's Laivi Põder [page](https://www.instagram.com/laivi_illustration/?hl=en)
+[![Foo](assets/images/bg2.JPG)](https://gillem.github.io/Memory-game//)
 
-I also designed my own logo for the website through [The Canva](https://www.canva.com/tools/logo-maker-q1/?utm_source=google_sem&utm_medium=cpc&utm_campaign=REV_UK_EN_CanvaPro_Branded_Tier2_EM&utm_term=REV_UK_EN_CanvaPro_Branded_Tier2_Logo%20Maker_EM&gclsrc=aw.ds&&gclid=Cj0KCQiA48j9BRC-ARIsAMQu3WQ7ydQ2Q3Kda5FdSQv4VHsPLO8MA73UXXeadtTRhM33HDo8yivlf6MaAnemEALw_wcB&gclsrc=aw.ds)
+The background colors and the patterns for other pages are the following:
 
-I chose the divider image from [Freepek page](https://www.freepik.com/free-vector/ornaments-collection-design-concept_3463268.htm).
++ color: #12022b
++ pattern: Signal
 
-In order to invert black colour to white, I used [Pinetools editor](https://pinetools.com/invert-image-colors).
-I also made the background transparent by using [removebg site](https://www.remove.bg/).
+[![Foo](assets/images/bg3.JPG)](https://gillem.github.io/Memory-game//)
 
 
+
+### Typography
+
+Google font _'Hachi Maru Pop'_, used as a main font, looked fun and inviting. It has _sans-serif_ as a back fall.
+
+### Imagery
+
+Pictures taken from [Unsplash site](https://unsplash.com/):
+* [Dog wearing Superman costume](https://unsplash.com/photos/7-ToFEHzMNw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Elias Castillo, 
+* [Doll with a yellow star on the head](https://unsplash.com/photos/RitenbXBHUk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Bundo Kim,
+* [Lollipop man](https://unsplash.com/photos/UU2PICtxgpA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Scott Webb,
+* [Mickey Mouse hat](https://unsplash.com/photos/T0wwG1nFoFY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Leighann Blackwood,
+* [White and blue cat](https://unsplash.com/photos/u3ZUSIH_eis?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Clayton Robbins, 
+* [Cinderella castle](https://unsplash.com/photos/6edUbq-qUZs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Brian McGowan,
+* [Donald Duck](https://unsplash.com/photos/EGJ-YrqPS8E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Kin Li,
+* [Nemo](https://unsplash.com/photos/x9yfTxHpj5w?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by David Clode,
+* [King Kong](https://unsplash.com/photos/EfASbqkuh2A?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Third Serving,
+* [White wall](https://unsplash.com/photos/4Zaq5xY5M_c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink ) as a backround photo by Joe Woods, 
+* [Two strawberry dougnut](https://unsplash.com/photos/PFzy4N0_R3M?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a backround photo by Elena Koycheva,
+* [Two cherries](https://unsplash.com/photos/vbAEHCrvXZ0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a backround photo by Mae Mu,
+
+Other sources:
+* [Casper](https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/CasperTheFriendlyGhost) from tvtropes site.
+* [Johhny Bravo](https://all-free-download.com/free-vector/download/johnny-bravo-013_49469.html) from all-free-download site.
+
+_Casper_ and _Johnny Bravo_ had their background coloured on [removebg site](https://www.remove.bg/).
+
+
+### Music
+* Background music: [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=pr42azVZi3o&list=PLya__OBTLMkONuQDu0kHDCrml2xuEINSi&index=5) by Kevin MacLeod,
+* [Game over sound](https://www.youtube.com/watch?v=5Wc3kwv0Ddw) taken from _BlittleMcNilsen_ YouTube page;
+* [Victory sound](https://www.youtube.com/watch?v=1ZsiEPoRCOs&list=PLuE1RIpYgk-UmLN1jS4Y9AZr_0FjujtfK&index=6) taken from _GFX Sounds_
+ YouTube page;
 
 ## Features
 ***
 
-The project consists of three different pages, all of which can be accessed through the menu in the navbar.
+The project practically consists of two different pages: _index.html_ as a main page, from which we can access the game. By opening a modal button, we can choose among three different levels: easy, medium and hard, and for each one I created one html document. They differ in design and in time necessary to finish the game.
 
 **Consistent features across all pages:**
 
--	The fixed navbar containing the menu at the top of the page is consistent and across all pages.
--	The sticky footer is consistent across all pages.
--	The navbar's and the footer's colour is consistent in each page, always containing the same elements.
--	Each page has a footer with copyright information and social media icons linking to different pages of the respective media.
--   I introduced a "Top up" button which can be found in the right bottom of each page and it leads to a navigation bar 
-which makes the scrolling easier for each user.
+* The navbar always containing "Back to menu",
+* Grid with memory card and the same overlays during the game: 
+  - "Click here to start" before the games starts,
+  - "You won" in case of winning,
+  - "You lost" in case of losing.
 
 
 ### Features left to Implement
 
 In the future, I would like:
-* to add the links to the right social networks, because now the pages of the various social networks do not yet exist.
-* add more places to visit in West Cork.
-* add the option to choose the language of the website.
+* introduce more photos for hard level,
+* display the highest score (the least flips that have been made),
+* introduce some animation on _index.html_ to have the page more dynamic.
 
 
 
@@ -193,6 +224,8 @@ In the future, I would like:
   * The language used to create the form and add content to the website.
 * CSS3
   * The language used to style the HTML5 elements.
+* JavaScript
+  * The language used to introduce the interactivity.
 * [Bootstrap framework](https://getbootstrap.com/)
   * The project uses **Bootstrap4** to simplify the structure of the website and easily make the website responsive.
   * The project also uses BootstrapCDN to provide icons from [Font Awesome](https://fontawesome.com)
@@ -213,80 +246,73 @@ In the future, I would like:
 * [Markdown here](https://markdown-here.com/livedemo.html)
   - Markdown editor created by Adam Pritchard
 * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
-* [Wikipedia](https://www.wikipedia.org/)
-
-*Note: I also found [W3C Schools](https://www.w3schools.com/) a helpful resource throughout the project, 
-providing me information related to HMTL, CSS, Bootstrap and sometimes even JavaScript which
-wasn't required in this project. 
-
-I cannot emphasize enough the importance of **Code Institute Slack Community** and their desire to help . 
-I got responses in 100% of the cases and that helped me to proceed with the lessons
-and it gave me a huge boost of confidence. This platform is very useful and friendly.
 
 
-## Testing
+
+
+## Testing   NOT FINISHED!!!!!!!!!!!!!!!
 ***
 
-**General Testing**
+**General Testing**   READ AGAIN AND CHANGE GENERAL TESTING SECTION (LIGHTHOUSE)
 
 * Tested all external links opened in a new tab and went to the correct page
-* Tested all internal links within the pages.
 * Tested all buttons.
 * Tested the responsive behaviour of images and text on desktops, laptops, notebooks and various smartphones.
-* Reduce and expand the width of the window to verify that each line of text behaves the way expected, 
-and that the text arrangement looks good on all device sizes.
+* Tested the responsivness of the page and 100vh height; there's no overlapping and no scroller introduced
+* Reduces and expanded the width of the window to verify that each memory card is distributed in expected way on all device sizes.
 * I identified and fixed the majority of problems that were affecting my site's performance, accessibility 
 and UX by using open-source Google tool **Lighthouse**. A day before submitting the milestone, performance of
 each page exceeded 80%.
 
 **Navbar**
 
-- Click on each navigation menu item and verify that it links to the correct page.
-- Hover over navigation links and see the difference in colour.
-- Click on one navigation link and see how the colour of the active link is different.
-- Change the screen sizes to verify that the navigation bar is responsive and switches 
-from in line menu to navbar toggler button with dropdown menu at the appropriate place.
-- Tested the picture logo in all device sizes and it's well positioned.
+- Changed the screen sizes to verify that the navigation bar is responsive,
+- Tested the light switch toggle button; it changed the background color every time upon click,
+- Removed the light switch toggle button from phone size, tested it and it isn't there,
+- On other pages, "Back to menu" button links _easy.html_, _medium.html_ and _hard.html_ documents to the main _index.html_ page
 
-**Map**
+**Buttons**
+- Hovered over buttons and saw the difference in colour,
+- Clicked on the button, the modals are working,
+- All the button in "Play" button lead to correct pages: _easy.html_, _medium.html_ and _hard.html_ respectively.
 
-The map's div is fixed and the map is flexible inside the div and can be moved in different directions. 
+**Overlays**
+- Tested the responsive behaviour of all three overlays on all devices, they are responsive on every device.
 
-- Press minimize and maximize buttons on the map to expand and reduce the scale. 
-- Press _View larger map_ to see that the map opens in the new tab. 
-- Press _Satelite imagery_ to see that it works both, in the page and in the larger view.
-- Press _Street map_ again to see that it changes back to street view.
-
-**Form contact**
-
-- Try to submit the empty form and verify that an error message about the required fields appears
-- Try to submit the form with an invalid email address and verify that a relevant error message appears
-- Try to submit the form with all inputs valid and verify that a success message appears.
-- Reduce and expand the width of the window to verify that the form display behaves and centres the way expected, 
-and that it is well positioned on all device sizes.
-
-**Footer**
-
-- Hover over each social media icon and confirm the different colour of the icon.
-- Click on each icon to confirm it opens a separate tab for its link.
-- Reduce and expand width of the window to verify that the footer is responsive and that
-is well positioned on all device sizes.
+## DO JAVASCRIPT TESTING!!!!!!!!!!!!!!!
 
 
 ## Validation
 ***
 I used **W3C CSS Validation Service** and **W3C Markup Validation Service** to check the validity of the website code.
-The validator showed just one error and it's in the _gallery.html_ page.
-It says that there is _src_ attribute missing from modal image. Every image in the _gallery.html_
-has the _src_ and _alt_ attribute, but since this modal serves to open each image from the gallery and to make it bigger,
-it wasn't possible to give a name to its source. Not taking into consideration this fact,
-all the pages, as well as the CSS page, passed validation tests which can be verified by clicking on the following links:
 
-- W3C CSS validation - [CSS page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FKilbronogue_trip%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- W3C Markup Validation - [Home page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FKilbronogue_trip%2Findex.html)
-- W3C Markup Validation - [Gallery page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FKilbronogue_trip%2Fgallery.html)
-- W3C Markup Validation - [Accommodation page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FKilbronogue_trip%2Faccommodation.html)
+HTML validation     IT'S WRONG, FIX IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Findex.html)
+- [easy.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Feasy.html)
+- [medium.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fmedium.html)
+- [hard.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fhard.html)
 
+CSS validation:
+
+- [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [style2.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle2.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+For JavaScript validation I used [JSHint](https://jshint.com/) page and validated both JavaScript documents _app.js_ and _app2.js_. The results are as follows:
+- For _app.js_:
+  - There is only one function in this file.
+  - It takes one argument.
+  - This function contains 3 statements.
+  - Cyclomatic complexity number for this function is 2.
+  - One warning all related to availability in ES6.
+
+- For _app2.js_: 
+  - There are 28 functions in this file.
+  - Function with the largest signature take 2 arguments, while the median is 0.
+  - Largest function has 21 statements in it, while the median is 2.5.
+  - The most complex function has a cyclomatic complexity value of 6 while the median is 1.
+  - 23 warnings - all related to availability in ES6.
+
+DO THE RESPONSIVNESS AND TEST IT THROUGH MOBILE FRIENDLY TEST!!!!!!!!!!!!!!!!!!! :
 
 To test phone responsiveness of each page, I  used [Mobile friendly Test](https://search.google.com/test/mobile-friendly).
 All three of the pages passed the test which can be checked by clicking on the following links: [Home page](https://search.google.com/test/mobile-friendly?id=HAcf9Qzh05MQltbkZByFNw),
@@ -321,13 +347,13 @@ Then follow these steps:
 1. Install the [Gitpod Browser Extentions for Chrome](https://www.gitpod.io/docs/browser-extension/)
 2. After installation, restart the browser
 3. Log into [Gitpod](https://gitpod.com/) with your gitpod account.
-4. Navigate to the [Project GitHub repository](https://github.com/GilleM/Kilbronogue_trip)
+4. Navigate to the [Project GitHub repository](https://github.com/GilleM/Memory-game)
 5. Click the green "Gitpod" button in the top right corner of the respository
 6. This will trigger a new gitpod workspace to be created from the code in github where you can work locally.
 
 To work on the project code within a local IDE such as VSCode, Pycharm etc:
 
-1. Follow this link to the [Project GitHub repository](https://github.com/GilleM/Kilbronogue_trip).
+1. Follow this link to the [Project GitHub repository](https://github.com/GilleM/Memory-game).
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository.
 4. In your local IDE open the terminal.
@@ -348,45 +374,18 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 
 ### Content
-The code to develop  _Gallery_ page. was obtained from Snippet by *NMonst4* - [Bootsnip page](https://bootsnipp.com/snippets/P2gor) 
 
-I used w3schools code for [Top up button](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp).
-
-I used CSS tricks for [quote](https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ ).
-
-Text I used in my web page is copied from the following Wikipedia's pages, respectively:
-- [Mount Gabriel](https://en.wikipedia.org/wiki/Mount_Gabriel)
-- [Norwegian language](https://en.wikipedia.org/wiki/Norwegian_language#:~:text=Norwegian%20(Norwegian%3A%20norsk)%20is,in%20particular%2C%20are%20very%20close.)
-- [Great Famine](https://en.wikipedia.org/wiki/Great_Famine_(Ireland))
-- [Black '47 (film)](https://en.wikipedia.org/wiki/Black_%2747_(film))
-
-Other text is copied from the following pages, respectively:
-- [James Joyce Quote](http://www.notable-quotes.com/j/joyce_james_ii.html)
-- [Jawaharlal Nehru Quote](https://www.brainyquote.com/quotes/jawaharlal_nehru_132485)
-- [Rural population of Ireland](https://tradingeconomics.com/ireland/rural-population-percent-of-total-population-wb-data.html)
-- [Butter Road](https://roaringwaterjournal.com/tag/the-butter-road-between-schull-and-ballydehob/)
-- [George Eliot Quote](https://www.brainyquote.com/quotes/george_eliot_104038)
-- [Jules Renard Quote](https://www.brainyquote.com/quotes/jules_renard_378268)
-- [Angela Abraham Quote](https://www.descriptionari.com/quotes/home/)
-- [Bantry sea temperature](https://www.seatemperature.org/europe/ireland/bantry.htm)
-- [Meanings of Irish placenames](https://www.geographyinaction.co.uk/Text_based_site/Placenames/pnamesmeaning.html)
-- [Kilbronogue story](https://en.wikipedia.org/wiki/Z)
-- [Realities of Irish life](https://archive.org/stream/realitiesofirish00trenrich#mode/2up) book
-
-
+FINISH FROM HERE!!!!!!!!!!!!!!!!!!!!!
 
 ### Media
 The photos used in this site were obtained from the following pages:
 - [Unsplash](https://www.lifeinnorway.net/norwegian-mythology-folk-tales/) photo
-- [Canva](https://www.canva.com/tools/logo-maker-q1/?utm_source=google_sem&utm_medium=cpc&utm_campaign=REV_UK_EN_CanvaPro_Branded_Tier2_EM&utm_term=REV_UK_EN_CanvaPro_Branded_Tier2_Logo%20Maker_EM&gclsrc=aw.ds&&gclid=Cj0KCQiA48j9BRC-ARIsAMQu3WQ7ydQ2Q3Kda5FdSQv4VHsPLO8MA73UXXeadtTRhM33HDo8yivlf6MaAnemEALw_wcB&gclsrc=aw.ds) -
- _REMOVE_ 
-- [Pinetools editor](https://pinetools.com/invert-image-colors) to invert black colour of the image to white
+
 - [Remove bg site](https://www.remove.bg/) to make a background for some memory card pictures 
 
 
 
 ### Acknowledgements
 
-- I received inspiration for this project from the beautiful paysage and peacefulness of the Kilbronogue
-village, all the people I met there and animals I saw.
+- I received inspiration for this project from 
 
