@@ -190,17 +190,19 @@ img {
         z-index: 25;
         width: 62%;
     }
-}
 
-/* <div class="game-container">
-    <div class="game-info-container">
-      <div class="game-info">
-        Time <span id="time-remaining">100</span>
-      </div>
-      <div class="game-info">
-        Flips <span id="flips">0</span>
-      </div>
-    </div> */
+    @keyframes overlay-grow {
+        0% {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+
+        100% {
+            background-color: rgba(0, 0, 0, .9);
+            font-size: 6em;
+        }
+    }
+}
 
 
 /* Medium devices (tablets, 768px and up) */
@@ -211,6 +213,18 @@ img {
 
     #memory-main-container {
         margin-top: 45px;
+    }
+
+    @keyframes overlay-grow {
+        0% {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+
+        100% {
+            background-color: rgba(0, 0, 0, .9);
+            font-size: 4em;
+        }
     }
 }
 
@@ -224,6 +238,18 @@ img {
         margin-top: 80px;
         height: 360px;
         width: 540px;
+    }
+
+    @keyframes overlay-grow {
+        0% {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+
+        100% {
+            background-color: rgba(0, 0, 0, .9);
+            font-size: 4em;
+        }
     }
 }
 
@@ -243,6 +269,19 @@ img {
         position: relative;
         width: 25%;
         height: 16.6666%;
+    }
+
+
+    @keyframes overlay-grow {
+        0% {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+
+        100% {
+            background-color: rgba(0, 0, 0, .9);
+            font-size: 2em;
+        }
     }
 
 }

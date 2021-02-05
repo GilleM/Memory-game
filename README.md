@@ -114,11 +114,9 @@ You can check them by clicking on one of the following links:
 
 
 
-+ [Desktop size](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_large_screen.html)
++ [index.html](https://gillem.github.io/Memory-game/assets/wireframes/wireframe_index_page.html)
 
-+ [Tablet size ](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_medium_screen.html)
-
-+ [Phone size ](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_extra_small_screen.html)
++ [memory game pages](https://gillem.github.io/Memory-game/assets/wireframes/wireframe_game_page.html)
 
 
 ## 5. Surface

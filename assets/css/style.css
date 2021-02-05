@@ -229,8 +229,55 @@ input:checked+.slider:before {
     margin-right: 5px;
 }
 
+/* ----Wireframe----------------- */
+.wireframe-background {
+    background-color: #e0dfdf;
+}
+
+.wireframe {
+    margin-left: 15%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.wireframe-main-heading {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.wireframe-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
 
 /* ------------------------MEDIA QUERIES----------------- */
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) and (min-width: 992px) {
+
+    /* #how-to-button {
+        margin-top: 430px;
+    } */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) and (min-width: 768px) {
+    #how-to-button {
+        margin-top: 90%;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) and (min-width: 576px) {
+    /* #how-to-button {
+        margin-top: 90%;
+    } */
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
