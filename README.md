@@ -4,7 +4,7 @@
 
 [View webpage in GitHub Pages](https://github.com/GilleM/Memory-game)
 
-Welcome to my first Code Institute milestone project that you can check out by clicking on the photo below:
+Welcome to my second Code Institute milestone project that you can check [here](https://gillem.github.io/Memory-game//).
 
 [![Foo](assets/images/back_face.jpg)](https://gillem.github.io/Memory-game//)
 
@@ -12,7 +12,7 @@ Welcome to my first Code Institute milestone project that you can check out by c
 
 ## Project Description
 ***
-**Memory game** is my second out of four milestone projects at the Code Institute Full Stack Developer course.
+**Memory game** is my second out of four milestone projects at the _Code Institute, Full Stack Developer_ course.
 The main requirements were to design, develop and implement front-end web application using HTML, CSS and JavaScript. 
 It was also required to implement front-end interactivity, using core JavaScript, JavaScript libraries and/or APIs.
 Everything needed to be tested  through development, implementation and deployment stages.
@@ -62,21 +62,22 @@ people by memory card playing
 - as a competitive user, I'd like to have different levels of complexity 
 - as a user, I'd like the pictures to be nice and funny and the page to be enjoyable. I'd like to have fun with playing it
 
-
-## Strategy
+##  Five Planes Method
+***
+## 1. Strategy
 
 The main goal of the website is for younger and older generations to have fun playing memory game.
 My personal goal was to well understand the JavaScript logic and to prove myself that I could do my first game.
 
 
-## Scope
+## 2. Scope
 My goal in design was to make everything as structured and intuitive as possible. I didn't introduce a lot of text but instead I put the accent on the very interactivity of the page; with images, flipping and matching cards, flip counter, timer, music, overlays, light-night switch button... I have also decided not to introduce any social links since I wanted to have the UX simple, easy to read and to follow.
 
 I certainly had a scope creep with all the features I wanted to add but that weren't agreed on at the starting point. 
 
 
 
-## Structure
+## 3. Structure
 
 
 My users are people wanting to have fun, whether is it about younger or older people, so I needed to make the site concise, simple and fun.
@@ -105,7 +106,7 @@ Other (_easy.html_, _medium.html_ and _hard.html_) pages:
 
 
 
-## Skeleton       NOT FINISHED!!!!!!!!!!
+## 4. Skeleton       NOT FINISHED!!!!!!!!!!
 ### Wireframe
 I used Balsamiq to developed the wireframes for mobile, tablet and laptop/desktop size. 
 
@@ -120,9 +121,7 @@ You can check them by clicking on one of the following links:
 + [Phone size ](https://gillem.github.io/Memory-game/assets/wireframes/Wireframe_extra_small_screen.html)
 
 
-## Surface
-
-- color, layout, fonts, images, order and sequence, and the site's identity.
+## 5. Surface
 
 I wanted to give the least amount of information but to pass the correct information. I removed all the additional text or possible content for which I thought would be redudant on the page: the game itself was the most important.
 

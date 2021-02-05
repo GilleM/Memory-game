@@ -6,10 +6,10 @@ class FlipAndTime {
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
-        this.audioController = new AudioController;
-}
+        this.audioController = new AudioController();
+    }
 
-startGame(){
+    startGame() {
         this.totalClicks = 0;
         this.cardToCheck = null;
         this.matchedCards = [];
@@ -22,63 +22,72 @@ startGame(){
             this.countDown = this.startCountDown();
             this.busy = false;
         }, 500);
-    } 
 
-shuffleCards(card) {
-    const cards = document.querySelectorAll('.memory-card');
-    cards.forEach(card => {
-    let randNumber = Math.floor(Math.random() * 24);
-    card.style.order = randNumber;
-    });
-}
-
-flipsCounter(card) {
-    if (this.canFlipCard(card)) {
-        this.totalClicks++;
-        this.ticker.innerText = this.totalClicks;
-        
     }
-}
-canFlipCard(card) {
-    return true;
-}
 
-startCountDown() {
-    return setInterval(() => {
-        this.timeRemaining--;
-        this.timer.innerText = this.timeRemaining;
-        if(this.timeRemaining === 0)
-            this.gameOver();
-    }, 1000);
-}
+    shuffleCards(card) {
+        const cards = document.querySelectorAll('.memory-card');
+        cards.forEach(card => {
+            let randNumber = Math.floor(Math.random() * 24);
+            card.style.order = randNumber;
+        });
+    }
 
-gameOver() {
-    clearInterval(this.countDown);
-    document.getElementById("game-over-text").classList.add("visible");
-    this.audioController.gameOver();
-}
+    flipsCounter(card) {
+        if (this.canFlipCard(card)) {
+            this.totalClicks++;
+            this.ticker.innerText = this.totalClicks;
+
+        }
+    }
+    canFlipCard(card) {
+        return true;
+    }
+
+    startCountDown() {
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining;
+            if (this.timeRemaining === 0)
+                this.gameOver();
+        }, 1000);
+    }
+
+    victory() {
+        clearInterval(this.countDown);
+        document.getElementById("victory-text").classList.add("visible");
+        this.audioController.victory();
+    }
+
+    gameOver() {
+        clearInterval(this.countDown);
+        document.getElementById("game-over-text").classList.add("visible");
+        this.audioController.gameOver();
+    }
 }
 
 
 // background music set
 class AudioController {
-   constructor() {
-        this.backgroundMusic = new Audio ("assets/music/game_music.mp3");
-        this.gameOverSong = new Audio ("assets/music/game_over_song.mp3")
+    constructor() {
+        this.backgroundMusic = new Audio("assets/music/game_music.mp3");
+        this.gameOverSong = new Audio("assets/music/game_over_song.mp3");
+        this.victorySong = new Audio("assets/music/victory_song.mp3");
         this.backgroundMusic.volume = 0.5;
         this.gameOverSong.volume = 0.2;
         this.backgroundMusic.loop = true;
-   }
+    }
 
     startMusic() {
-        this.backgroundMusic.play(); 
+        this.backgroundMusic.play();
     }
     stopMusic() {
         this.backgroundMusic.pause();
-        this.backgroundMusic.currentTime = 0; 
+        this.backgroundMusic.currentTime = 0;
     }
     victory() {
-        this.stopMusic(); 
+        this.stopMusic();
+        this.victorySong.play();
     }
     gameOver() {
         this.stopMusic();
@@ -90,56 +99,56 @@ class AudioController {
 
 // GRABBING OVERLAYS and CARD FROM THE DOM 
 // 3 overlays: START, GAME OVER, VICTORY
-function ready(){
-//makes array of elements
+function ready() {
+    //makes array of elements
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
-      let game;
+    let game;
 
     const pathName = window.location.pathname;
-    const gameType =  pathName.indexOf("easy") !== -1 ? "EASY" : 
-                      pathName.indexOf("hard") !== -1 ? "HARD" : "MEDIUM";
+    const gameType = pathName.indexOf("easy") !== -1 ? "EASY" :
+        pathName.indexOf("hard") !== -1 ? "HARD" : "MEDIUM";
 
-    if(gameType === "EASY"){
-       game =  new FlipAndTime (200, cardsArray);
-    }  else if(gameType === "MEDIUM"){
-       game =  new FlipAndTime (100, cardsArray);
-    }   else if(gameType === "HARD"){
-       game =  new FlipAndTime (60, cardsArray);
+    if (gameType === "EASY") {
+        game = new FlipAndTime(120, cardsArray);
+    } else if (gameType === "MEDIUM") {
+        game = new FlipAndTime(90, cardsArray);
+    } else if (gameType === "HARD") {
+        game = new FlipAndTime(60, cardsArray);
     }
-    
- 
+
+
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.classList.remove ("visible");
+            overlay.classList.remove("visible");
             //let audioController = new AudioController();
             //audioController.startMusic();
             game.startGame();
-            });   
         });
+    });
 
-        cardsArray.forEach(card => {
+    cardsArray.forEach(card => {
         card.addEventListener('click', () => {
             game.flipsCounter(card);
-            });   
         });
-    
-//=============================================================================
+    });
 
-const cards = document.querySelectorAll('.memory-card');
+    //=============================================================================
 
-let theCardIsFlipped;
-let firstCard, secondCard;
-// lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
-let lockBoard = false;
+    const cards = document.querySelectorAll('.memory-card');
 
-        
-// FLIP CARDS
-function cardFlip() {
-    if (lockBoard) return;
+    let theCardIsFlipped;
+    let firstCard, secondCard;
+    // lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
+    let lockBoard = false;
+
+
+    // FLIP CARDS
+    function cardFlip() {
+        if (lockBoard) return;
 
         // double click on the card
-    if (this === firstCard) return;
+        if (this === firstCard) return;
         this.classList.add("flip");
         if (!theCardIsFlipped) {
             // first click
@@ -148,50 +157,50 @@ function cardFlip() {
         } else {
             // second click
             theCardIsFlipped = false;
-            secondCard = this; 
+            secondCard = this;
             cardMatch()
         }
-        }
-        
-function cardMatch(){
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disabled();
-    } else {
-        notFlipped();
     }
- }
 
-// both cards are matching
- function disabled (){
-    firstCard.removeEventListener('click', cardFlip);
-    secondCard.removeEventListener('click', cardFlip);
-    resetBoard();
- }
+    function cardMatch() {
+        if (firstCard.dataset.framework === secondCard.dataset.framework) {
+            disabled();
+        } else {
+            notFlipped();
+        }
+    }
 
-// NOT a match
-//setTimeout introduced because it removed flip class from the second card before we opened it
-function notFlipped () {
-    lockBoard = true;
-    setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
-    lockBoard = false;
-    resetBoard();
-    }, 700);
-}
+    // both cards are matching
+    function disabled() {
+        firstCard.removeEventListener('click', cardFlip);
+        secondCard.removeEventListener('click', cardFlip);
+        resetBoard();
+    }
+
+    // NOT a match
+    //setTimeout introduced because it removed flip class from the second card before we opened it
+    function notFlipped() {
+        lockBoard = true;
+        setTimeout(() => {
+            firstCard.classList.remove('flip');
+            secondCard.classList.remove('flip');
+            lockBoard = false;
+            resetBoard();
+        }, 700);
+    }
 
 
-function resetBoard() {
-  theCardIsFlipped = false;
-  lockBoard = false;
-  firstCard = null;
-  secondCard = null;
-}
+    function resetBoard() {
+        theCardIsFlipped = false;
+        lockBoard = false;
+        firstCard = null;
+        secondCard = null;
+    }
 
-//Immediately Invoked Function Expression
-//This function will be exacuted right after its definition
+    //Immediately Invoked Function Expression
+    //This function will be exacuted right after its definition
 
-cards.forEach(card => card.addEventListener('click', cardFlip))
+    cards.forEach(card => card.addEventListener('click', cardFlip));
 }
 
 
@@ -202,6 +211,3 @@ if (document.readyState === "loading") {
 } else {
     ready();
 }
-
-
-
