@@ -266,9 +266,9 @@ input:checked+.slider:before {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
-    #how-to-button {
+    /* #how-to-button {
         margin-top: 90%;
-    }
+    } */
 }
 
 

@@ -43,7 +43,7 @@ class FlipAndTime {
     canFlipCard(card) {
         return true;
     }
-
+    // setting the countdown interval
     startCountDown() {
         return setInterval(() => {
             this.timeRemaining--;

@@ -2,11 +2,12 @@
 
 **Code Institute - Second Milestone Project for Interactive Frontend Development**
 
-[View webpage in GitHub Pages](https://github.com/GilleM/Memory-game)
 
 Welcome to my second Code Institute milestone project that you can check [here](https://gillem.github.io/Memory-game//).
+[View webpage in GitHub Pages](https://github.com/GilleM/Memory-game)
 
-[![Foo](assets/images/back_face.jpg)](https://gillem.github.io/Memory-game//)
+
+[![Foo](assets/images/readme_photo.JPG)](https://gillem.github.io/Memory-game//)
 
 
 
@@ -21,7 +22,7 @@ According to study of International Psychogeriatrics 2016,
 memory games help sharpen certain  thinking skills that tend to wane with age, such as processing speed, planning skills, 
 reaction time, decision making, and short-term memory.
 
-The reason why I decided to go with _Memory game_ is simply because I like fun brain games whose rules is not difficult to understand and follow, but they still require concentration. I am of the opinion that the Memory game project was entertaining and at the same time challenging for a JavaScript beginner, such as I am.
+The reason why I decided to go with _Memory game_ is simply because I like fun brain games whose rules are not difficult to understand and follow, but they still require concentration. I am of the opinion that the Memory game project was entertaining and at the same time challenging for a JavaScript beginner, such as I am.
 
 
 
@@ -51,8 +52,7 @@ including aspects of branding, design, usability and function."_
 
 ### The business goals of this website is:
 
-- the page could possibly be the part of some company's website or it could contribute to entertaining larger group of 
-people by memory card playing
+- the page could possibly be the part of some company's website or it could contribute to entertaining large group of people by playing memory card game
 
 ### User Stories
 
@@ -96,19 +96,19 @@ Inscription "Memory game" suggest the title of the game itself and there's a tog
 Other (_easy.html_, _medium.html_ and _hard.html_) pages:
 *   Depending on the view, the **navbar** shifts: on the large screens it stays on the left while for the other screens stays on the top. The light switch toggle has been removed and the "Memory game" inscription is changed to "Back to menu".
 
-* The **central part** of the page is composed of the grid of cards which are evenly distribute on the page and are made with full responsiveness so that the data is nicely loaded and presented on the phone, tablet and desktop view.
-  - I decided to introduce different back memory card picture for every difficulty, going from the practically plane picture to the one with most details (cherry) that can be seen in the hardest level. The mentioned is done on purpose, to distract a user a bit and to make the game more challenging.
+* The **central part** of the page is composed of the grid of cards which are evenly distributed on the page and are made with full responsiveness so that the data is nicely loaded and presented on the phone, tablet and desktop view.
+  - I decided to introduce a different back memory card picture for every difficulty, going from the plane picture to the one with most details (cherry) that can be seen in the hardest level. The mentioned is done on purpose, to distract a user a bit and to make the game more challenging.
   - The flips are introduced that count how many times the cards have been flipped
-  - The timer shows different second for different levels: 120 seconds for beginner, 90 for medium and 60 for hard level.
+  - The timer shows different seconds for different levels: 120 seconds for beginner, 90 for medium and 60 for hard level.
   - The background is taken from Herro Pattern - "Signal" Pattern
 
 * The **footer** has been completely removed.
 
 
 
-## 4. Skeleton       NOT FINISHED!!!!!!!!!!
+## 4. Skeleton       
 ### Wireframe
-I used Balsamiq to developed the wireframes for mobile, tablet and laptop/desktop size. 
+I used Balsamiq to develope the wireframes for mobile, tablet and laptop/desktop size. 
 
 You can check them by clicking on one of the following links:
 
@@ -121,7 +121,7 @@ You can check them by clicking on one of the following links:
 
 ## 5. Surface
 
-I wanted to give the least amount of information but to pass the correct information. I removed all the additional text or possible content for which I thought would be redudant on the page: the game itself was the most important.
+I wanted to give the least amount of information but to pass the correct information. I removed all the additional text or possible content for which I thought would be redundant  on the page: the game itself was the most important.
 
 I played with designs and pictures; I certainly wanted to have all the pages vivid and funny but I tried to keep some consistent colors, e.g. the round slider and the footer. I tried to have the right contrast between background and other elements on the page.
 
@@ -172,13 +172,13 @@ Pictures taken from [Unsplash site](https://unsplash.com/):
 * [Donald Duck](https://unsplash.com/photos/EGJ-YrqPS8E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Kin Li,
 * [Nemo](https://unsplash.com/photos/x9yfTxHpj5w?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by David Clode,
 * [King Kong](https://unsplash.com/photos/EfASbqkuh2A?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Third Serving,
-* [White wall](https://unsplash.com/photos/4Zaq5xY5M_c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink ) as a backround photo by Joe Woods, 
-* [Two strawberry dougnut](https://unsplash.com/photos/PFzy4N0_R3M?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a backround photo by Elena Koycheva,
-* [Two cherries](https://unsplash.com/photos/vbAEHCrvXZ0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a backround photo by Mae Mu,
+* [White wall](https://unsplash.com/photos/4Zaq5xY5M_c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink ) as a background photo by Joe Woods, 
+* [Two strawberry doughnut](https://unsplash.com/photos/PFzy4N0_R3M?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a background photo by Elena Koycheva,
+* [Two cherries](https://unsplash.com/photos/vbAEHCrvXZ0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) as a background photo by Mae Mu,
 
 Other sources:
 * [Casper](https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/CasperTheFriendlyGhost) from tvtropes site.
-* [Johhny Bravo](https://all-free-download.com/free-vector/download/johnny-bravo-013_49469.html) from all-free-download site.
+* [Johnny Bravo](https://all-free-download.com/free-vector/download/johnny-bravo-013_49469.html) from all-free-download site.
 
 _Casper_ and _Johnny Bravo_ had their background coloured on [removebg site](https://www.remove.bg/).
 
@@ -192,7 +192,7 @@ _Casper_ and _Johnny Bravo_ had their background coloured on [removebg site](htt
 ## Features
 ***
 
-The project practically consists of two different pages: _index.html_ as a main page, from which we can access the game. By opening a modal button, we can choose among three different levels: easy, medium and hard, and for each one I created one html document. They differ in design and in time necessary to finish the game.
+The project practically consists of two (4 htmls in total)different pages: _index.html_ as a main page, from which we can access the game. By opening a modal button, we can choose among three different levels: easy, medium and hard, and for each one I created one html document. They differ in design and in time necessary to finish the game.
 
 **Consistent features across all pages:**
 
@@ -206,7 +206,7 @@ The project practically consists of two different pages: _index.html_ as a main 
 ### Features left to Implement
 
 In the future, I would like:
-* introduce more photos for hard level,
+* introduce more photos for the hard level,
 * display the highest score (the least flips that have been made),
 * introduce some animation on _index.html_ to have the page more dynamic.
 
@@ -222,7 +222,7 @@ In the future, I would like:
 * CSS3
   * The language used to style the HTML5 elements.
 * JavaScript
-  * The language used to introduce the interactivity.
+  * The language used to introduce interactivity.
 * [Bootstrap framework](https://getbootstrap.com/)
   * The project uses **Bootstrap4** to simplify the structure of the website and easily make the website responsive.
   * The project also uses BootstrapCDN to provide icons from [Font Awesome](https://fontawesome.com)
@@ -255,7 +255,7 @@ In the future, I would like:
 * Tested all external links opened in a new tab and went to the correct page
 * Tested all buttons.
 * Tested the responsive behaviour of images and text on desktops, laptops, notebooks and various smartphones.
-* Tested the responsivness of the page and 100vh height; there's no overlapping and no scroller introduced
+* Tested the responsiveness of the page and 100vh height; there's no overlapping and no scroller introduced
 * Reduces and expanded the width of the window to verify that each memory card is distributed in expected way on all device sizes.
 * I identified and fixed the majority of problems that were affecting my site's performance, accessibility 
 and UX by using open-source Google tool **Lighthouse**. A day before submitting the milestone, performance of
@@ -271,7 +271,7 @@ each page exceeded 80%.
 **Buttons**
 - Hovered over buttons and saw the difference in colour,
 - Clicked on the button, the modals are working,
-- All the button in "Play" button lead to correct pages: _easy.html_, _medium.html_ and _hard.html_ respectively.
+- All the buttons that open by clicking on the "Play" button lead to correct pages: _easy.html_, _medium.html_ and _hard.html_ respectively.
 
 **Overlays**
 - Tested the responsive behaviour of all three overlays on all devices, they are responsive on every device.
