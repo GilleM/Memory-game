@@ -110,6 +110,48 @@ function ready() {
         });
     }
 
+    function flipCard(card) {
+        if (canFlipCard(card)) {
+
+            if (!card.classList) return;
+            totalClicks++;
+            ticker.innerText = totalClicks;
+            card.classList.add("visible");
+            card.classList.add("flip");
+
+            if (cardToCheck)
+                checkForCardMatch(card);
+            else
+                cardToCheck = card;
+        }
+    }
+
+    function cardMatch(card1, card2) {
+        matchedCards.push(card1);
+        matchedCards.push(card1);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        if (matchedCards.length === cardsArray.length)
+            victory();
+    }
+
+    function cardmisMatch(card) {
+        busy = true;
+        setTimeout(() => {
+            card1.classList.remove("visible");
+            card1.classList.remove("flip");
+            card2.classList.remove("visible");
+            card2.classList.remove("flip");
+            busy = false;
+        }, 1000);
+    }
+
+
+    function getCardType(card) {
+        return card.dataset.framework;
+    }
+
+    //========
     canFlipCard(card) {
         //return true
         return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
@@ -117,50 +159,14 @@ function ready() {
 
 
 
-    flipCard(card) {
-        if (this.canFlipCard(card)) {
-            this.totalClicks++;
-            this.ticker.innerText = this.totalClicks;
-            card.classList.add("visible");
-
-            if (this.cardToCheck)
-                this.checkForCardMatch(card);
-            else
-                this.cardToCheck = card;
-        }
-    }
 
 
-    checkForCardMatch(card) {
-        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
-            this.cardMatch(card, this.cardToCheck);
-        else
-            this.cardmisMatch(card, this.cardToCheck);
 
-        this.cardToCheck = null;
-    }
 
-    cardMatch(card1, card2) {
-        this.matchedCards.push(card1);
-        this.matchedCards.push(card1);
-        card1.classList.add('matched');
-        card2.classList.add('matched');
-        if (this.matchedCards.length === this.cardsArray)
-            this.victory();
-    }
 
-    cardmisMatch(card) {
-        this.busy = true;
-        setTimeout(() => {
-            card1.classList.remove("visible");
-            card2.classList.remove("visible");
-            this.busy = false;
-        }, 1000);
-    }
 
-    getCardType(card) {
-        return card.getElementsByClassName("data-framework");
-    }
+
+
 
 
 
