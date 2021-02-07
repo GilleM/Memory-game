@@ -80,29 +80,25 @@ function ready() {
     const cards = document.querySelectorAll('.memory-card');
 
 
-    startGame() {
-
-        // we will put all the matching cards into matchedCard array
-        this.matchedCards = [];
-        this.busy = true;
-        this.timeRemaining = this.totalTime;
+    function startGame() {
 
         setTimeout(() => {
-            this.audioController.startMusic();
-            this.shuffleCards();
-            this.countDown = this.startCountDown();
-            this.busy = false;
+            audioController.startMusic();
+            shuffleCards();
+            countDown = startCountDown();
+            busy = false;
         }, 500);
 
-        this.hideCards();
-        this.timer.innerText = this.timeRemaining;
-        this.ticker.innerText = this.totalClicks;
+        hideCards();
+        timer.innerText = timeRemaining;
+        ticker.innerText = totalClicks;
     }
-    hideCards() {
-        this.cardsArray.forward(card => {
+
+    function hideCards() {
+        cardsArray.forward(card => {
             card.classList.remove("visible");
             card.classList.remove("matched");
-
+            card.classList.remove("flip");
         });
     }
 
