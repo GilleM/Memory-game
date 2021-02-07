@@ -27,6 +27,7 @@ class AudioController {
 }
 
 function ready() {
+
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
     let game;
@@ -95,7 +96,7 @@ function ready() {
     }
 
     function hideCards() {
-        cardsArray.forward(card => {
+        cardsArray.forEach(card => {
             card.classList.remove("visible");
             card.classList.remove("matched");
             card.classList.remove("flip");
@@ -114,6 +115,7 @@ function ready() {
         if (canFlipCard(card)) {
 
             if (!card.classList) return;
+
             totalClicks++;
             ticker.innerText = totalClicks;
             card.classList.add("visible");
@@ -124,6 +126,16 @@ function ready() {
             else
                 cardToCheck = card;
         }
+    }
+
+    function checkForCardMatch(card) {
+
+        if (getCardType(card) === getCardType(cardToCheck))
+            cardMatch(card, cardToCheck);
+        else
+            cardmisMatch(card, cardToCheck);
+
+        cardToCheck = null;
     }
 
     function cardMatch(card1, card2) {
@@ -173,23 +185,17 @@ function ready() {
     }
 
 
-
-
-
-
-
-
-
-
-
-
     // setting the countdown interval
-    startCountDown() {
+    function startCountDown() {
         return setInterval(() => {
-            this.timeRemaining--;
-            this.timer.innerText = this.timeRemaining;
-            if (this.timeRemaining === 0)
-                this.gameOver();
+            timeRemaining--;
+            timer.innerText = timeRemaining;
+            if (timeRemaining === 0) {
+                if (matchedCards.length === cardsArray.length)
+                    victory();
+            } else {
+                gameOver();
+            }
         }, 1000);
     }
 
@@ -207,58 +213,6 @@ function ready() {
 //================================================================
 
 
-
-
-// FLIP CARDS
-function cardFlip() {
-    if (lockBoard) return;
-
-    // double click on the card
-    if (this === firstCard) return;
-    this.classList.add("flip");
-    if (!theCardIsFlipped) {
-        // first click
-        theCardIsFlipped = true;
-        firstCard = this;
-    } else {
-        // second click
-        theCardIsFlipped = false;
-        secondCard = this;
-        cardMatch()
-
-    }
-}
-
-function cardMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disabled();
-    } else {
-        notFlipped();
-    }
-}
-
-function disabled() {
-    firstCard.removeEventListener('click', cardFlip);
-    secondCard.removeEventListener('click', cardFlip);
-    resetBoard();
-}
-
-function notFlipped() {
-    lockBoard = true;
-    setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-        lockBoard = false;
-        resetBoard();
-    }, 700);
-}
-
-function resetBoard() {
-    theCardIsFlipped = false;
-    lockBoard = false;
-    firstCard = null;
-    secondCard = null;
-}
 
 
 //This function will be exacuted right after its definition
