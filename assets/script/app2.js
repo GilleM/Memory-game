@@ -102,18 +102,20 @@ function ready() {
         });
     }
 
-    canFlipCard(card) {
-        //return true
-        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
-    }
-
-    shuffleCards(card) {
+    function shuffleCards(card) {
         const cards = document.querySelectorAll('.memory-card');
         cards.forEach(card => {
             let randNumber = Math.floor(Math.random() * 24);
             card.style.order = randNumber;
         });
     }
+
+    canFlipCard(card) {
+        //return true
+        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
+    }
+
+
 
     flipCard(card) {
         if (this.canFlipCard(card)) {
