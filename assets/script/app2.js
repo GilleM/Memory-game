@@ -152,12 +152,25 @@ function ready() {
     }
 
     //========
-    canFlipCard(card) {
-        //return true
-        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
+    function canFlipCard(card) {
+        return (!busy && !matchedCards.includes(card) && card !== cardToCheck)
     }
 
+    function victory() {
+        clearInterval(countDown);
+        document.getElementById("victory-text").classList.add("visible");
+        audioController.victory();
+        timeRemaining = totalTime;
+        totalClicks = 0;
+    }
 
+    function gameOver() {
+        clearInterval(countDown);
+        document.getElementById("game-over-text").classList.add("visible");
+        audioController.gameOver();
+        timeRemaining = totalTime;
+        totalClicks = 0;
+    }
 
 
 
@@ -180,17 +193,7 @@ function ready() {
         }, 1000);
     }
 
-    victory() {
-        clearInterval(this.countDown);
-        document.getElementById("victory-text").classList.add("visible");
-        this.audioController.victory();
-    }
 
-    gameOver() {
-        clearInterval(this.countDown);
-        document.getElementById("game-over-text").classList.add("visible");
-        this.audioController.gameOver();
-    }
 }
 
 
