@@ -41,15 +41,6 @@ nav a {
 }
 
 /* Central container */
-.main-container {
-    padding: 15px 0px;
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .row-container {
     margin: 0px;
 }
@@ -62,18 +53,34 @@ nav a {
     padding-bottom: 10px;
 }
 
+.game-options-wrapper {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 162px);
+    justify-content: center;
+}
+
+.game-options-wrapper .background-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+
+}
+
+.game-options-wrapper .background-photo button {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center !important;
+    width: 100%;
+}
 
 /* 1st button */
 #playbutton {
-    margin: auto;
     z-index: 10;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    justify-content: center;
     padding: 4px 10px;
+    margin-top: 200px;
     font-size: 25px;
     font-weight: bold;
     border: 1px solid grey;
@@ -88,15 +95,9 @@ nav a {
 
 /* 2nd button */
 #how-to-button {
-    margin: auto;
-    margin-top: 430px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    justify-content: center;
     padding: 4px 10px;
+    margin-top: 150px;
     font-size: 15px;
     font-weight: bold;
     border: 1px solid grey;
@@ -111,13 +112,10 @@ nav a {
 }
 
 .background-photo {
-    width: 100%;
-    max-height: 370px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    margin: 0 auto;
-    opacity: 0.8;
+    background-image: url(/assets/images/main_photo.JPG);
+    min-height: 30vh;
+    background-position: center;
+    background-size: cover;
 }
 
 .modal-title {
@@ -146,16 +144,20 @@ footer {
 
 /* Light-dark mode toggle  */
 .theme-switch-wrapper {
+    margin-left: auto;
     display: flex;
-    z-index: 10;
-    position: fixed;
-    right: 50px;
-    top: 20px;
+    align-items: center;
 }
 
 .theme-switch-wrapper span {
     margin-right: 10px;
+    display: flex;
     font-size: 1.3rem;
+    align-items: center;
+}
+
+.theme-switch-wrapper .fas.fa-sun {
+    margin-left: 1rem;
 }
 
 .toggle-text {
@@ -168,6 +170,7 @@ footer {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-bottom: 0;
 }
 
 .switch input {
@@ -202,7 +205,6 @@ footer {
 
 input:checked+.slider {
     background-color: rgb(11, 33, 51);
-    ;
 }
 
 input:focus+.slider {
@@ -257,41 +259,31 @@ input:checked+.slider:before {
 /* ------------------------MEDIA QUERIES----------------- */
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 1200px) and (min-width: 992px) {
-
-    /* #how-to-button {
-        margin-top: 430px;
-    } */
-}
+@media (max-width: 1200px) and (min-width: 992px) {}
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 991px) and (min-width: 768px) {
-    /* #how-to-button {
-        margin-top: 90%;
-    } */
-}
+@media (max-width: 991px) and (min-width: 768px) {}
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 767px) and (min-width: 576px) {
-    /* #how-to-button {
-        margin-top: 90%;
-    } */
-}
+@media (max-width: 767px) and (min-width: 576px) {}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
 
-    .toggle-text {
+    /* .toggle-text {
+        display: none;
+    } */
+
+    .theme-switch-wrapper {
+        /* display: flex;
+        width: 100%;
+        margin-bottom: 1rem; */
         display: none;
     }
 
-    .theme-switch-wrapper {
-        right: 20px;
-    }
-
-    #how-to-button {
-        margin-top: 340px;
+    .navbar-expand-lg {
+        height: 70px;
     }
 
     .navbar-brand {

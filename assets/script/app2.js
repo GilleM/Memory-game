@@ -12,6 +12,7 @@ class FlipAndTime {
     startGame() {
         this.totalClicks = 0;
         this.cardToCheck = null;
+        // we will put all the matching cards into matchedCard array
         this.matchedCards = [];
         this.busy = true;
         this.timeRemaining = this.totalTime;
@@ -23,6 +24,21 @@ class FlipAndTime {
             this.busy = false;
         }, 500);
 
+        this.hideCards();
+        this.timer.innerText = this.timeRemaining;
+        this.ticker.innerText = this.totalClicks;
+    }
+    hideCards() {
+        this.cardsArray.forward(card => {
+            card.classList.remove("visible");
+            card.classList.remove("matched");
+
+        });
+    }
+
+    canFlipCard(card) {
+        //return true
+        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
     }
 
     shuffleCards(card) {
@@ -33,16 +49,53 @@ class FlipAndTime {
         });
     }
 
-    flipsCounter(card) {
+    flipCard(card) {
         if (this.canFlipCard(card)) {
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
+            card.classList.add("visible");
 
+            if (this.cardToCheck)
+                this.checkForCardMatch(card);
+            else
+                this.cardToCheck = card;
         }
     }
-    canFlipCard(card) {
-        return true;
+
+
+    checkForCardMatch(card) {
+        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else
+            this.cardmisMatch(card, this.cardToCheck);
+
+        this.cardToCheck = null;
     }
+
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card1);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        if (this.matchedCards.length === this.cardsArray)
+            this.victory();
+    }
+
+    cardmisMatch(card) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove("visible");
+            card2.classList.remove("visible");
+            this.busy = false;
+        }, 1000);
+    }
+
+    getCardType(card) {
+        return card.getElementsByClassName("data-framework");
+    }
+
+
+
     // setting the countdown interval
     startCountDown() {
         return setInterval(() => {
@@ -98,9 +151,7 @@ class AudioController {
 
 
 // GRABBING OVERLAYS and CARD FROM THE DOM 
-// 3 overlays: START, GAME OVER, VICTORY
 function ready() {
-    //makes array of elements
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
     let game;
@@ -129,11 +180,11 @@ function ready() {
 
     cardsArray.forEach(card => {
         card.addEventListener('click', () => {
-            game.flipsCounter(card);
+            game.flipCard(card);
         });
     });
 
-    //=============================================================================
+    //================================================================
 
     const cards = document.querySelectorAll('.memory-card');
 
@@ -159,6 +210,7 @@ function ready() {
             theCardIsFlipped = false;
             secondCard = this;
             cardMatch()
+
         }
     }
 
@@ -170,15 +222,12 @@ function ready() {
         }
     }
 
-    // both cards are matching
     function disabled() {
         firstCard.removeEventListener('click', cardFlip);
         secondCard.removeEventListener('click', cardFlip);
         resetBoard();
     }
 
-    // NOT a match
-    //setTimeout introduced because it removed flip class from the second card before we opened it
     function notFlipped() {
         lockBoard = true;
         setTimeout(() => {
@@ -189,7 +238,6 @@ function ready() {
         }, 700);
     }
 
-
     function resetBoard() {
         theCardIsFlipped = false;
         lockBoard = false;
@@ -197,7 +245,7 @@ function ready() {
         secondCard = null;
     }
 
-    //Immediately Invoked Function Expression
+
     //This function will be exacuted right after its definition
 
     cards.forEach(card => card.addEventListener('click', cardFlip));

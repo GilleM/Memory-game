@@ -20,42 +20,40 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Memory game</a>
+        <!-- Light/dark mode -->
+        <div class="theme-switch-wrapper">
+            <span id="toggle-icon">
+                <span class="toggle-text">Light Mode
+                    <i class="fas fa-sun"></i>
+                </span>
+            </span>
+            <label class="switch">
+                <input type="checkbox">
+                <div class="slider round"></div>
+            </label>
+        </div>
     </nav>
 
-    <!-- Light/dark mode -->
-    <div class="theme-switch-wrapper">
-        <span id="toggle-icon">
-            <span class="toggle-text">Light Mode
-                <i class="fas fa-sun"></i>
-            </span>
-        </span>
-        <label class="switch">
-            <input type="checkbox">
-            <div class="slider round"></div>
-        </label>
-    </div>
+
 
     <!-- Main container -->
-    <div class="container-fluid main-container">
-        <div class="row justify-content-center align-items-center row-container">
-            <div class="col-xl-5 col-lg-6 col-md-7 col-sm-8">
-                <img class="background-photo img-fluid" src="assets/images/main_photo.JPG" alt="background photo">
+    <div class="game-options-wrapper">
+
+        <div class="col-md-4 col-sm-6 background-photo">
+            <!-- Play Button trigger modal -->
+            <div class="text-center">
+                <button type="button" id="playbutton" class="btn play-button" data-toggle="modal" data-target="#playButtonCenter">
+                    Play
+                </button>
+                <!-- How to play button trigger modal -->
+                <button type="button" id="how-to-button" class="btn active" data-toggle="modal" data-target="#howToButtonLong">
+                    How to play?
+                </button>
+
             </div>
         </div>
     </div>
 
-    <!-- Play Button trigger modal -->
-    <button type="button" id="playbutton" class="btn play-button" data-toggle="modal" data-target="#playButtonCenter">
-        Play
-    </button>
-
-    <!-- How to play button trigger modal -->
-
-    <div class="col-md-12 play-game-container">
-        <button type="button" id="how-to-button" class="btn active" data-toggle="modal" data-target="#howToButtonLong">
-            How to play?
-        </button>
-    </div>
 
     <!-- Footer -->
     <footer class="container-fluid footer-container">
