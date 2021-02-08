@@ -112,7 +112,7 @@ nav a {
 }
 
 .background-photo {
-    background-image: url(/assets/images/main_photo.JPG);
+    background-image: url(../images/main_photo.JPG);
     min-height: 30vh;
     background-position: center;
     background-size: cover;
