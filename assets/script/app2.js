@@ -1,4 +1,4 @@
-// background music set
+// setting the background music
 class AudioController {
     constructor() {
         this.backgroundMusic = new Audio("assets/music/game_music.mp3");
@@ -12,6 +12,7 @@ class AudioController {
     startMusic() {
         this.backgroundMusic.play();
     }
+
     stopMusic() {
         this.backgroundMusic.pause();
         this.backgroundMusic.currentTime = 0;
@@ -26,8 +27,8 @@ class AudioController {
     }
 }
 
+// setting the function ready
 function ready() {
-
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
     let totalTime;
@@ -38,10 +39,13 @@ function ready() {
     let cardToCheck = null;
     let countDown;
 
-
     const pathName = window.location.pathname;
-    const gameType = pathName.indexOf("easy") !== -1 ? "EASY" :
-        pathName.indexOf("hard") !== -1 ? "HARD" : "MEDIUM";
+    const gameType =
+        pathName.indexOf("easy") !== -1 ?
+        "EASY" :
+        pathName.indexOf("hard") !== -1 ?
+        "HARD" :
+        "MEDIUM";
 
     if (gameType === "EASY") {
         totalTime = 120;
@@ -52,29 +56,24 @@ function ready() {
     }
 
     let timeRemaining = totalTime;
-    let timer = document.getElementById('time-remaining');
-    let ticker = document.getElementById('flips');
+    let timer = document.getElementById("time-remaining");
+    let ticker = document.getElementById("flips");
     let audioController = new AudioController();
 
-    overlaysArray.forEach(overlay => {
-        overlay.addEventListener('click', () => {
+    overlaysArray.forEach((overlay) => {
+        overlay.addEventListener("click", () => {
             overlay.classList.remove("visible");
             startGame();
         });
     });
 
-    cardsArray.forEach(card => {
-        card.addEventListener('click', () => {
+    cardsArray.forEach((card) => {
+        card.addEventListener("click", () => {
             flipCard(card);
         });
     });
 
-    //=====================================
-    const cards = document.querySelectorAll('.memory-card');
-
-
     function startGame() {
-
         setTimeout(() => {
             audioController.startMusic();
             shuffleCards();
@@ -88,7 +87,7 @@ function ready() {
     }
 
     function hideCards() {
-        cardsArray.forEach(card => {
+        cardsArray.forEach((card) => {
             card.classList.remove("visible");
             card.classList.remove("matched");
             card.classList.remove("flip");
@@ -96,8 +95,8 @@ function ready() {
     }
 
     function shuffleCards(card) {
-        const cards = document.querySelectorAll('.memory-card');
-        cards.forEach(card => {
+        const cards = document.querySelectorAll(".memory-card");
+        cards.forEach((card) => {
             let randNumber = Math.floor(Math.random() * 24);
             card.style.order = randNumber;
         });
@@ -105,7 +104,6 @@ function ready() {
 
     function flipCard(card) {
         if (canFlipCard(card)) {
-
             if (!card.classList) return;
 
             totalClicks++;
@@ -113,19 +111,15 @@ function ready() {
             card.classList.add("visible");
             card.classList.add("flip");
 
-            if (cardToCheck)
-                checkForCardMatch(card);
-            else
-                cardToCheck = card;
+            if (cardToCheck) checkForCardMatch(card);
+            else cardToCheck = card;
         }
     }
 
     function checkForCardMatch(card) {
-
         if (getCardType(card) === getCardType(cardToCheck))
             cardMatch(card, cardToCheck);
-        else
-            cardmisMatch(card, cardToCheck);
+        else cardmisMatch(card, cardToCheck);
 
         cardToCheck = null;
     }
@@ -133,10 +127,9 @@ function ready() {
     function cardMatch(card1, card2) {
         matchedCards.push(card1);
         matchedCards.push(card1);
-        card1.classList.add('matched');
-        card2.classList.add('matched');
-        if (matchedCards.length === cardsArray.length)
-            victory();
+        card1.classList.add("matched");
+        card2.classList.add("matched");
+        if (matchedCards.length === cardsArray.length) victory();
     }
 
     function cardmisMatch(card1, card2) {
@@ -150,14 +143,13 @@ function ready() {
         }, 1000);
     }
 
-
     function getCardType(card) {
         return card.dataset.framework;
     }
 
-    //========
+    // setting the properties when it can flip the card
     function canFlipCard(card) {
-        return (!busy && !matchedCards.includes(card) && card !== cardToCheck);
+        return !busy && !matchedCards.includes(card) && card !== cardToCheck;
     }
 
     function victory() {
@@ -168,6 +160,13 @@ function ready() {
         totalClicks = 0;
     }
 
+    let resetButton = document.getElementById('victory-text');
+    resetButton.onclick = reloadPage;
+
+    function reloadPage() {
+        window.location.reload();
+    }
+
     function gameOver() {
         clearInterval(countDown);
         document.getElementById("game-over-text").classList.add("visible");
@@ -175,7 +174,6 @@ function ready() {
         timeRemaining = totalTime;
         totalClicks = 0;
     }
-
 
     // setting the countdown interval
     function startCountDown() {
@@ -192,18 +190,7 @@ function ready() {
         }, 1000);
     }
 
-    //================================================================
-
-
-
-
-    //This function will be exacuted right after its definition
-
-    cards.forEach(card => card.addEventListener('click', function(card) {
-        if (card) flipCard(card);
-    }));
 }
-
 
 //if the html page hasn't loaded yet, wait for the page to get loaded and then call the function ready()
 
