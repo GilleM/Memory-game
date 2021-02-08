@@ -1,3 +1,5 @@
+//Inspiration for the code ended with much better understanding of JS is taken from PortExe - https://www.youtube.com/watch?v=3uuQ3g92oPQ 
+
 // setting the background music
 class AudioController {
     constructor() {
@@ -81,12 +83,12 @@ function ready() {
             busy = false;
         }, 500);
 
-        hideCards();
+        disabled();
         timer.innerText = timeRemaining;
         ticker.innerText = totalClicks;
     }
 
-    function hideCards() {
+    function disabled() {
         cardsArray.forEach((card) => {
             card.classList.remove("visible");
             card.classList.remove("matched");
@@ -119,7 +121,7 @@ function ready() {
     function checkForCardMatch(card) {
         if (getCardType(card) === getCardType(cardToCheck))
             cardMatch(card, cardToCheck);
-        else cardmisMatch(card, cardToCheck);
+        else notCardMatch(card, cardToCheck);
 
         cardToCheck = null;
     }
@@ -132,7 +134,7 @@ function ready() {
         if (matchedCards.length === cardsArray.length) victory();
     }
 
-    function cardmisMatch(card1, card2) {
+    function notCardMatch(card1, card2) {
         busy = true;
         setTimeout(() => {
             card1.classList.remove("visible");

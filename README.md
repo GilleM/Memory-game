@@ -367,7 +367,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 ***
 * [Memory Card Game - JavaScript Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) by Marina Ferreira - [GitHub](https://github.com/code-sketch/memory-game/)
   * I took  inspiration to create a border box. I started initially with the grid, but found it difficult to distribute the cards properly since they have absolute position. Border box made it much easier for me. 
-* [How to Code a Card Matching Game](https://www.youtube.com/watch?v=28VfzEiJgy4) by Web Dev Simplified - [GitHub](https://github.com/WebDevSimplified)
+* [How To Code A Card Game In Plain JavaScript - Spooky Halloween Edition](https://www.youtube.com/watch?v=3uuQ3g92oPQ) by portexe - [GitHub](https://github.com/portexe/Mix-Or-Match/tree/tutorial-code)
   * Thanks to _Dev Simplified video_, I used the _class constructor_ for the first time and I decided to introduce the flip counter, timer, overlays and music. 
   The HTML he was working on was different to mine. I tried to implement some of his JS logic into my project since I never encountered any JS solutions before. 
   I changed the shuffle method, I decided to take the functions out of the constructor and I linked _index.html_ level buttons page to the game. Taking functions out of the constructor was really challenging since I needed to change the code itself.
