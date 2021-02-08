@@ -11,4 +11,3 @@ function switchTheme(event) {
 
 // Event listener
 toggleSwitch.addEventListener('change', switchTheme);
-

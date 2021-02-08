@@ -12,7 +12,6 @@
 body {
     height: 100vh;
     font-family: 'Hachi Maru Pop', cursive, sans-serif;
-    /* font-family: 'Yusei Magic', sans-serif; */
     margin: 0px;
     position: relative;
     background-color: var(--background-color);
@@ -73,6 +72,7 @@ nav a {
     margin-bottom: 1rem;
     text-align: center !important;
     width: 100%;
+    font-weight: bold;
 }
 
 /* 1st button */
@@ -83,14 +83,14 @@ nav a {
     margin-top: 200px;
     font-size: 25px;
     font-weight: bold;
-    border: 1px solid grey;
-    background-color: white;
-    transition: background-color 1s ease-out 50ms
+    border: 1px solid #808080;
+    background-color: #ffffff;
+    transition: background-color 1s ease-out 50ms;
 }
 
 #playbutton:hover {
-    border: 1px solid black;
-    background-color: pink;
+    border: 1px solid #000000;
+    background-color: #ffc0cb;
 }
 
 /* 2nd button */
@@ -100,15 +100,31 @@ nav a {
     margin-top: 150px;
     font-size: 15px;
     font-weight: bold;
-    border: 1px solid grey;
+    border: 1px solid #808080;
     z-index: 10;
-    background-color: white;
+    background-color: #ffffff;
     transition: background-color 1s ease-out 50ms
 }
 
 #how-to-button:hover {
-    border: 1px solid black;
-    background-color: rgb(192, 186, 186);
+    border: 1px solid #000000;
+    background-color: #c0baba;
+}
+
+.easy_color_button {
+    background-color: #82f982;
+    font-weight: bold;
+
+}
+
+.medium_color_button {
+    background-color: #c7ff50;
+    font-weight: bold;
+}
+
+.hard_color_button {
+    background-color: #ff020299;
+    font-weight: bold;
 }
 
 .background-photo {
@@ -125,7 +141,7 @@ nav a {
 /*  ------------------------------FOOTER-----------------------------------  */
 footer {
     background-color: #35156d;
-    color: white;
+    color: #ffffff;
     min-height: 50px;
     margin: 0;
     text-align: center;
@@ -220,10 +236,12 @@ input:checked+.slider:before {
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
+    margin-right: 0px;
 }
 
 .slider.round:before {
     border-radius: 50%;
+    margin-right: 0px;
 }
 
 .fas {
@@ -258,22 +276,7 @@ input:checked+.slider:before {
 
 /* ------------------------MEDIA QUERIES----------------- */
 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 1200px) and (min-width: 992px) {}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 991px) and (min-width: 768px) {}
-
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 767px) and (min-width: 576px) {}
-
-/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-
-    /* .toggle-text {
-        display: none;
-    } */
 
     .theme-switch-wrapper {
         /* display: flex;

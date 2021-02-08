@@ -20,8 +20,9 @@ Testing if the _Play button_ opens the modal frame with 3 additional buttons|cli
 Testing if the EASY button opens the easy.html|click| [Level _easy_ appears](easy_game.JPG)| |x
 Testing if the MEDIUM button opens the medium.html|click| [Level medium appears](medium_game.JPG)| |x
 Testing if the HARD button opens the hard.html|click| [Level hard appears](hard_game.JPG)| |x
-Testing if _How to play button_ opens the modal with intructions how to play the game|click|How to play button works properly | |x
-
+Testing if _How to play button_ opens the modal with instructions on how to play the game|click|How to play button works properly | |x
+Testing if the _Play button_ changes colour|hover| The _Play button_ changes color when hovered | |x
+Testing if the _How to play_ button changes colour|hover| The _How to play_ button changes color when hovered | |x
 
 
 
@@ -44,6 +45,6 @@ Manual testing if the number of time remaining changes and decrements by 1|| [Th
 Testing if the overlay _Click to start_ appears at the beginning of the game|| [_CLICK TO START_ appears](overlay_click_to_start.JPG)| |x
 Testing if the overlay _YOU WON!_ appears when we finish the game in time|| [_YOU WON!_ appears](overlay_you_won.JPG)| |x
 Testing if the overlay _Game over_ appears when we don't finish the game in time|| [_GAME OVER_ appears](overlay_game_over.JPG)| |x
-Testing the background music|| The background music works when the game starts| |x
-Testing the background music for for _YOU WON_ and _GAME OVER_ overlay|| The music starts when the overlay appears| |x
-Testing if the cards are shuffled every time I start with the game|click|The cards are shuffled for all the levels  <br> [level _easy_](shuffled_1.JPG) <br> [level _medium_](shuffled_2.JPG) <br> [level _hard_](shuffled_3.JPG)| |x
+Testing the background music|| The background music starts when the game starts| |x
+Testing the background music for for _YOU WON_ and _GAME OVER_ overlay|| The music starts when the overlays appear| |x
+Testing if the cards are shuffled every time I start the game|click|The cards are shuffled for all the levels  <br> [level _easy_](shuffled_1.JPG) <br> [level _medium_](shuffled_2.JPG) <br> [level _hard_](shuffled_3.JPG)| |x

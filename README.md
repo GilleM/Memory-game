@@ -8,7 +8,7 @@ Welcome to my second Code Institute milestone project that you can check [here](
 [View webpage in GitHub Pages](https://github.com/GilleM/Memory-game)
 
 
-[![Foo](assets/images/readme_photo.JPG)](https://gillem.github.io/Memory-game//)
+[![Foo](assets/images/readme_photo.png)](https://gillem.github.io/Memory-game//)
 
 
 
@@ -279,7 +279,7 @@ A day before submitting the milestone, performance of _index.page_ and _easy.htm
 
 ## Validation
 ***
-I used **W3C CSS Validation Service** and **W3C Markup Validation Service** to check the validity of the website code.
+I used **W3C CSS Validation Service** and **W3C Markup Validation Service** to check the validity of the website code. No errors were found anywhere apart the _aria-labelledby attribute_ that must point to an element in the same (_index.html_) document. 
 
 HTML validation
 - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Findex.html)
@@ -292,7 +292,7 @@ CSS validation:
 - [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [style2.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle2.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-For JavaScript validation I used [JSHint](https://jshint.com/) page that helped me to get rid of some unused variables I had in _apps.js_. 
+For JavaScript validation I used [JSHint](https://jshint.com/) page that helped me to get rid of some unused variables I had in _apps2.js_. 
 I validated both JavaScript documents _app.js_ and _app2.js_. The results are as follows:
 - For _app.js_:
   - There is only one function in this file.
@@ -302,11 +302,11 @@ I validated both JavaScript documents _app.js_ and _app2.js_. The results are as
   - One warning about _const_ availability in ES6.
 
 - For _app2.js_: 
-  - There are 29 functions in this file.
+  - There are 28 functions in this file.
   - Function with the largest signature take 2 arguments, while the median is 0.
   - Largest function has 34 statements in it, while the median is 2.
   - The most complex function has a cyclomatic complexity value of 6 while the median is 1.
-  - 28 warnings - all related to variables availability in ES6.
+  - 27 warnings - all related to variables availability in ES6.
 
 To test phone responsiveness of each page, I  used [Responsinator](https://www.responsinator.com/).
 The memory game passed the test which can be checked by clicking [here](https://www.responsinator.com/?url=https%3A%2F%2Fgillem.github.io%2FMemory-game%2F%2Fmedium.html).
@@ -366,13 +366,13 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 ## Credits
 ***
 * [Memory Card Game - JavaScript Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) by Marina Ferreira - [GitHub](https://github.com/code-sketch/memory-game/)
-  * I took the inspiration to create border box. I started initially with the grid, but found it difficult to distribute the cards properly since they have absolute position. Border box made it much easier for me. 
+  * I took  inspiration to create a border box. I started initially with the grid, but found it difficult to distribute the cards properly since they have absolute position. Border box made it much easier for me. 
 * [How to Code a Card Matching Game](https://www.youtube.com/watch?v=28VfzEiJgy4) by Web Dev Simplified - [GitHub](https://github.com/WebDevSimplified)
-  * Thanks to _Dev Simplified video_, I used class constructor for the first time and I decided to introduce flip counter, timer, overlays and music. 
+  * Thanks to _Dev Simplified video_, I used the _class constructor_ for the first time and I decided to introduce the flip counter, timer, overlays and music. 
   The HTML he was working on was different to mine. I tried to implement some of his JS logic into my project since I never encountered any JS solutions before. 
-  I changed the shuffle method, I decided to take the functions out of constructor and I linked _index.html_ level buttons page to the game. Taking functions out of constructor was really challenging since I needed to change the code itself.
+  I changed the shuffle method, I decided to take the functions out of the constructor and I linked _index.html_ level buttons page to the game. Taking functions out of the constructor was really challenging since I needed to change the code itself.
 * [JavaScript Web Projects: 20 Projects to Build Your Portfolio Udemy course](https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume/learn/lecture/20253444#overview) by Andrei Neagoie 
-  * He taught me how to make light-dark switch button and introduced me to [Hero Patterns](https://www.heropatterns.com/) page that I never heard of before. 
+  * He taught me how to make a light-dark switch button and introduced me to [Hero Patterns](https://www.heropatterns.com/) page that I never heard of before. 
  
 
 
@@ -386,5 +386,8 @@ https://www.youtube.com/watch?v=28VfzEiJgy4
 
 ### Acknowledgements
 
-- I received inspiration for this project from 
+- First of all, I would like to thank [Vaibhav More](https://www.linkedin.com/in/vaibhav-more-188809118/) for helping me to finish with the project. He gave me a lot of tips on how to improve my code and tried to pass some knowledge about the JS constructors. His tips were higly appreciated.
+
+I want to thank our Slack community as well and my tutor Nishant Kumar.
+
 
