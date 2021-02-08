@@ -33,7 +33,7 @@ function ready() {
     let game;
     let totalTime;
 
-    let matchedCard = [];
+    let matchedCards = [];
     let busy = true;
 
 
@@ -45,10 +45,6 @@ function ready() {
     let totalClicks = 0;
     let cardToCheck = null;
     let countDown;
-    let timeRemaining = totalTime;
-    let timer = document.getElementById('time-remaining');
-    let ticker = document.getElementById('flips');
-    let audioController = new AudioController();
 
 
     const pathName = window.location.pathname;
@@ -63,6 +59,10 @@ function ready() {
         totalTime = 60;
     }
 
+    let timeRemaining = totalTime;
+    let timer = document.getElementById('time-remaining');
+    let ticker = document.getElementById('flips');
+    let audioController = new AudioController();
 
     overlaysArray.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -147,7 +147,7 @@ function ready() {
             victory();
     }
 
-    function cardmisMatch(card) {
+    function cardmisMatch(card1, card2) {
         busy = true;
         setTimeout(() => {
             card1.classList.remove("visible");
@@ -191,33 +191,25 @@ function ready() {
             timeRemaining--;
             timer.innerText = timeRemaining;
             if (timeRemaining === 0) {
-                if (matchedCards.length === cardsArray.length)
+                if (matchedCards.length === cardsArray.length) {
                     victory();
-            } else {
-                gameOver();
+                } else {
+                    gameOver();
+                }
             }
         }, 1000);
     }
 
-
-}
-
+    //================================================================
 
 
 
 
+    //This function will be exacuted right after its definition
 
-
-
-
-//================================================================
-
-
-
-
-//This function will be exacuted right after its definition
-
-cards.forEach(card => card.addEventListener('click', cardFlip));
+    cards.forEach(card => card.addEventListener('click', function(card) {
+        if (card) flipCard(card);
+    }));
 }
 
 
