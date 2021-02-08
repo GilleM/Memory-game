@@ -160,7 +160,7 @@ The background colors and the patterns for other pages are the following:
 
 Google font _'Hachi Maru Pop'_, used as a main font, looked fun and inviting. It has _sans-serif_ as a fall back.
 
-### Imagery
+### Images
 
 Pictures taken from [Unsplash site](https://unsplash.com/):
 * [Dog wearing Superman costume](https://unsplash.com/photos/7-ToFEHzMNw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Elias Castillo, 
@@ -182,12 +182,6 @@ Other sources:
 
 _Casper_ and _Johnny Bravo_ had their background coloured on [removebg site](https://www.remove.bg/).
 
-
-### Music
-* Background music: [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=pr42azVZi3o&list=PLya__OBTLMkONuQDu0kHDCrml2xuEINSi&index=5) by Kevin MacLeod,
-* [Game over sound](https://www.youtube.com/watch?v=5Wc3kwv0Ddw) taken from _BlittleMcNilsen_ YouTube page;
-* [Victory sound](https://www.youtube.com/watch?v=1ZsiEPoRCOs&list=PLuE1RIpYgk-UmLN1jS4Y9AZr_0FjujtfK&index=6) taken from _GFX Sounds_
- YouTube page;
 
 ## Features
 ***
@@ -247,10 +241,12 @@ In the future, I would like:
 
 
 
-## Testing   NOT FINISHED!!!!!!!!!!!!!!!
+## Testing   
 ***
 
-**General Testing**   READ AGAIN AND CHANGE GENERAL TESTING SECTION (LIGHTHOUSE)
+The testing of the website has been done through manual testing. It can be viewed in [this document](https://github.com/GilleM/Memory-game/blob/master/assets/testing/TESTING.md).
+
+**General Testing**   
 
 * Tested all external links opened in a new tab and went to the correct page
 * Tested all buttons.
@@ -258,8 +254,11 @@ In the future, I would like:
 * Tested the responsiveness of the page and 100vh height; there's no overlapping and no scroller introduced
 * Reduces and expanded the width of the window to verify that each memory card is distributed in the expected way on all device sizes.
 * I identified and fixed the majority of problems that were affecting my site's performance, accessibility 
-and UX by using open-source Google tool **Lighthouse**. A day before submitting the milestone, performance of
-each page exceeded 80%.
+and UX by using open-source Google tool **Lighthouse**. 
+A day before submitting the milestone, performance of _index.page_ and _easy.html page_ is as follows:
+
+[![Foo](assets/testing/lighthouse_index.JPG)](https://gillem.github.io/Memory-game//)
+[![Foo](assets/testing/lighthouse_easy.JPG)](https://gillem.github.io/Memory-game//)
 
 **Navbar**
 
@@ -276,16 +275,13 @@ each page exceeded 80%.
 **Overlays**
 - Tested the responsive behaviour of all three overlays on all devices, they are responsive on every device.
 
-## Testing
-
-The testing of the website, both in development and as a finished product has been done through manual testing. It can be viewed in [this document](https://github.com/GilleM/Memory-game/blob/master/assets/testing/TESTING.md).
 
 
 ## Validation
 ***
 I used **W3C CSS Validation Service** and **W3C Markup Validation Service** to check the validity of the website code.
 
-HTML validation     IT'S WRONG, FIX IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+HTML validation
 - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Findex.html)
 - [easy.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Feasy.html)
 - [medium.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fmedium.html)
@@ -296,26 +292,25 @@ CSS validation:
 - [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [style2.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgillem.github.io%2FMemory-game%2Fassets%2Fcss%2Fstyle2.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-For JavaScript validation I used [JSHint](https://jshint.com/) page and validated both JavaScript documents _app.js_ and _app2.js_. The results are as follows:
+For JavaScript validation I used [JSHint](https://jshint.com/) page that helped me to get rid of some unused variables I had in _apps.js_. 
+I validated both JavaScript documents _app.js_ and _app2.js_. The results are as follows:
 - For _app.js_:
   - There is only one function in this file.
   - It takes one argument.
   - This function contains 3 statements.
   - Cyclomatic complexity number for this function is 2.
-  - One warning all related to availability in ES6.
+  - One warning about _const_ availability in ES6.
 
 - For _app2.js_: 
-  - There are 28 functions in this file.
+  - There are 29 functions in this file.
   - Function with the largest signature take 2 arguments, while the median is 0.
-  - Largest function has 21 statements in it, while the median is 2.5.
+  - Largest function has 34 statements in it, while the median is 2.
   - The most complex function has a cyclomatic complexity value of 6 while the median is 1.
-  - 23 warnings - all related to availability in ES6.
+  - 28 warnings - all related to variables availability in ES6.
 
-DO THE RESPONSIVNESS AND TEST IT THROUGH MOBILE FRIENDLY TEST!!!!!!!!!!!!!!!!!!! :
-
-To test phone responsiveness of each page, I  used [Mobile friendly Test](https://search.google.com/test/mobile-friendly).
-All three of the pages passed the test which can be checked by clicking on the following links: [Home page](https://search.google.com/test/mobile-friendly?id=HAcf9Qzh05MQltbkZByFNw),
- [Gallery page](https://search.google.com/test/mobile-friendly?id=zG1pGL1AnIlVCmg_60pdeA) and [Accommodation page](https://search.google.com/test/mobile-friendly?id=z5TcQNYJ91LtQ_hYvbzB1A)
+To test phone responsiveness of each page, I  used [Responsinator](https://www.responsinator.com/).
+The memory game passed the test which can be checked by clicking [here](https://www.responsinator.com/?url=https%3A%2F%2Fgillem.github.io%2FMemory-game%2F%2Fmedium.html).
+ 
 
 
 
@@ -370,19 +365,24 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 ## Credits
 ***
+* [Memory Card Game - JavaScript Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) by Marina Ferreira - [GitHub](https://github.com/code-sketch/memory-game/)
+  * I took the inspiration to create border box. I started initially with the grid, but found it difficult to distribute the cards properly since they have absolute position. Border box made it much easier for me. 
+* [How to Code a Card Matching Game](https://www.youtube.com/watch?v=28VfzEiJgy4) by Web Dev Simplified - [GitHub](https://github.com/WebDevSimplified)
+  * Thanks to _Dev Simplified video_, I used class constructor for the first time and I decided to introduce flip counter, timer, overlays and music. 
+  The HTML he was working on was different to mine. I tried to implement some of his JS logic into my project since I never encountered any JS solutions before. 
+  I changed the shuffle method, I decided to take the functions out of constructor and I linked _index.html_ level buttons page to the game. Taking functions out of constructor was really challenging since I needed to change the code itself.
+* [JavaScript Web Projects: 20 Projects to Build Your Portfolio Udemy course](https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume/learn/lecture/20253444#overview) by Andrei Neagoie 
+  * He taught me how to make light-dark switch button and introduced me to [Hero Patterns](https://www.heropatterns.com/) page that I never heard of before. 
+ 
 
-
-### Content
-
-FINISH FROM HERE!!!!!!!!!!!!!!!!!!!!!
 
 ### Media
-The photos used in this site were obtained from the following pages:
-- [Unsplash](https://www.lifeinnorway.net/norwegian-mythology-folk-tales/) photo
+* Background music: [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=pr42azVZi3o&list=PLya__OBTLMkONuQDu0kHDCrml2xuEINSi&index=5) by Kevin MacLeod,
+* [Game over sound](https://www.youtube.com/watch?v=5Wc3kwv0Ddw) taken from _BlittleMcNilsen_ YouTube page;
+* [Victory sound](https://www.youtube.com/watch?v=1ZsiEPoRCOs&list=PLuE1RIpYgk-UmLN1jS4Y9AZr_0FjujtfK&index=6) taken from _GFX Sounds_
+ YouTube page;
 
-- [Remove bg site](https://www.remove.bg/) to make a background for some memory card pictures 
-
-
+https://www.youtube.com/watch?v=28VfzEiJgy4
 
 ### Acknowledgements
 

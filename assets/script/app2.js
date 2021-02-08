@@ -30,18 +30,10 @@ function ready() {
 
     let overlaysArray = Array.from(document.querySelectorAll(".overlay-text"));
     let cardsArray = Array.from(document.querySelectorAll(".memory-card"));
-    let game;
     let totalTime;
 
     let matchedCards = [];
     let busy = true;
-
-
-    let theCardIsFlipped;
-    let firstCard, secondCard;
-    // lockBoard = not to match another pair before the first pair matches (unflips) or unmatches (flips back)
-    let lockBoard = false;
-
     let totalClicks = 0;
     let cardToCheck = null;
     let countDown;
@@ -165,7 +157,7 @@ function ready() {
 
     //========
     function canFlipCard(card) {
-        return (!busy && !matchedCards.includes(card) && card !== cardToCheck)
+        return (!busy && !matchedCards.includes(card) && card !== cardToCheck);
     }
 
     function victory() {

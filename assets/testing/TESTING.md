@@ -29,13 +29,13 @@ Testing if _How to play button_ opens the modal with intructions how to play the
 
 ### Navigation
 
-**item**|**action**|**expected result**|**Fail**|**Pass**
+**test**|**action**|**expected result**|**Fail**|**Pass**
 :-----:|:-----:|:-----:|:-----:|:-----:
-Title|click|Leads to the index page| |x
+Testing if the _Back to menu_ text leads to the index page|click|_Back to menu_ leads to _index.html_ page| |x
 
 
 ### Memory game table
-**item**|**action**|**expected result**|**Fail**|**Pass**
+**TEST**|**action**|**expected result**|**Fail**|**Pass**
 :-----:|:-----:|:-----:|:-----:|:-----:
 Manual testing the cards flip|click|[The cards flip](does_card_flip.JPG)| |x
 Manual testing if the cards with the same data framework match|click|[The cards match](do_cards_match.JPG)| |x
@@ -46,4 +46,4 @@ Testing if the overlay _YOU WON!_ appears when we finish the game in time|| [_YO
 Testing if the overlay _Game over_ appears when we don't finish the game in time|| [_GAME OVER_ appears](overlay_game_over.JPG)| |x
 Testing the background music|| The background music works when the game starts| |x
 Testing the background music for for _YOU WON_ and _GAME OVER_ overlay|| The music starts when the overlay appears| |x
-Testing if the cards are shuffled every time I start with the game|click|For  <br> [level _easy_](shuffled_1.JPG) <br> [level _medium__](shuffled_2.JPG) <br> and [level _hard_](shuffled_3.JPG)| |x
+Testing if the cards are shuffled every time I start with the game|click|The cards are shuffled for all the levels  <br> [level _easy_](shuffled_1.JPG) <br> [level _medium_](shuffled_2.JPG) <br> [level _hard_](shuffled_3.JPG)| |x
