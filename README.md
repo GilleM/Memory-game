@@ -276,7 +276,9 @@ each page exceeded 80%.
 **Overlays**
 - Tested the responsive behaviour of all three overlays on all devices, they are responsive on every device.
 
-## DO JAVASCRIPT TESTING!!!!!!!!!!!!!!!
+## Testing
+
+The testing of the website, both in development and as a finished product has been done through manual testing. It can be viewed in [this document](https://github.com/GilleM/Memory-game/blob/master/assets/testing/TESTING.md).
 
 
 ## Validation
