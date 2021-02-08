@@ -4,6 +4,7 @@
 
 
 Welcome to my second Code Institute milestone project that you can check [here](https://gillem.github.io/Memory-game//).
+
 [View webpage in GitHub Pages](https://github.com/GilleM/Memory-game)
 
 
@@ -14,7 +15,7 @@ Welcome to my second Code Institute milestone project that you can check [here](
 ## Project Description
 ***
 **Memory game** is my second out of four milestone projects at the _Code Institute, Full Stack Developer_ course.
-The main requirements were to design, develop and implement front-end web application using HTML, CSS and JavaScript. 
+The main requirements were to design, develop and implement a front-end web application using HTML, CSS and JavaScript. 
 It was also required to implement front-end interactivity, using core JavaScript, JavaScript libraries and/or APIs.
 Everything needed to be tested  through development, implementation and deployment stages.
 
@@ -22,7 +23,7 @@ According to study of International Psychogeriatrics 2016,
 memory games help sharpen certain  thinking skills that tend to wane with age, such as processing speed, planning skills, 
 reaction time, decision making, and short-term memory.
 
-The reason why I decided to go with _Memory game_ is simply because I like fun brain games whose rules are not difficult to understand and follow, but they still require concentration. I am of the opinion that the Memory game project was entertaining and at the same time challenging for a JavaScript beginner, such as I am.
+The reason why I decided to go with _Memory game_ is simply because I like fun brain games whose rules are not difficult to understand and follow, but still require concentration. I am of the opinion that the Memory game project was entertaining and at the same time challenging for a JavaScript beginner, such as myself.
 
 
 
@@ -52,22 +53,21 @@ including aspects of branding, design, usability and function."_
 
 ### The business goals of this website is:
 
-- the page could possibly be the part of some company's website or it could contribute to entertaining large group of people by playing memory card game
+- the page could possibly be part of some company's website or it could contribute to entertaining large group of people
 
 ### User Stories
 
-- as a new user who never played memory, I want to have access to the memory rules,
-- as a new user, I want to see nicely developed game with logical characteristic (2 matching cards appear, other stay closed)
+- as a new user who never played a memory game before, I want to have access to the memory game rules,
+- as a new user, I want to see a nicely developed game with logical characteristics (2 matching cards appear, others stay closed)
 - as a young user, I want to have more time to find all the cards 
 - as a competitive user, I'd like to have different levels of complexity 
-- as a user, I'd like the pictures to be nice and funny and the page to be enjoyable. I'd like to have fun with playing it
+- as a user, I'd like the pictures to be nice and funny and the page to be enjoyable. I'd like to have fun while playing it
 
 ##  Five Planes Method
 ***
 ## 1. Strategy
 
-The main goal of the website is for younger and older generations to have fun playing memory game.
-My personal goal was to well understand the JavaScript logic and to prove myself that I could do my first game.
+The main goal of the website is for younger and older generations to have fun playing a memory game. My personal goal was to well understand the JavaScript logic well and to prove to myself that I could do my first game.
 
 
 ## 2. Scope
@@ -81,12 +81,12 @@ I certainly had a scope creep with all the features I wanted to add but that wer
 
 
 My users are people wanting to have fun, whether is it about younger or older people, so I needed to make the site concise, simple and fun.
-I decided to go with 100vh height and completely omit scroll bar (followed the logic "what is get is what you see").
+I decided to go with 100vh height and completely omit the scroll bar (followed the logic "what you see is what you get").
 
 
  _Index.html_ page:
 *   **navbar** is always on the top, kept simply white.
-Inscription "Memory game" suggest the title of the game itself and there's a toggle light switch button introduced on the right.
+Inscription "Memory game" suggests the title of the game itself and there's a toggle light switch button introduced on the right.
 
 * The **central part** is composed of the main photo (that mimics the memory game with some photos open) and two toggle buttons: the one in the center of the page (and picture) that invites users to play the game and the one below with "How to play" inscription.
 
@@ -94,10 +94,10 @@ Inscription "Memory game" suggest the title of the game itself and there's a tog
 
 
 Other (_easy.html_, _medium.html_ and _hard.html_) pages:
-*   Depending on the view, the **navbar** shifts: on the large screens it stays on the left while for the other screens stays on the top. The light switch toggle has been removed and the "Memory game" inscription is changed to "Back to menu".
+*   Depending on the view, the **navbar** shifts: on the large screens it stays on the left while for the other screens it stays on the top. The light switch toggle has been removed and the "Memory game" inscription is changed to "Back to menu".
 
 * The **central part** of the page is composed of the grid of cards which are evenly distributed on the page and are made with full responsiveness so that the data is nicely loaded and presented on the phone, tablet and desktop view.
-  - I decided to introduce a different back memory card picture for every difficulty, going from the plane picture to the one with most details (cherry) that can be seen in the hardest level. The mentioned is done on purpose, to distract a user a bit and to make the game more challenging.
+  - I decided to introduce a different back memory card picture for every difficulty, going from the plane picture to the one with most details (cherry) that can be seen in the hardest level. The aforementioned is done on purpose, to distract a user a bit and to make the game more challenging.
   - The flips are introduced that count how many times the cards have been flipped
   - The timer shows different seconds for different levels: 120 seconds for beginner, 90 for medium and 60 for hard level.
   - The background is taken from Herro Pattern - "Signal" Pattern
@@ -121,7 +121,7 @@ You can check them by clicking on one of the following links:
 
 ## 5. Surface
 
-I wanted to give the least amount of information but to pass the correct information. I removed all the additional text or possible content for which I thought would be redundant  on the page: the game itself was the most important.
+I wanted to provide the essential information to the user in the fewest amount of words possible. I removed all the additional text or possible content for which I thought would be redundant  on the page: the game itself was the most important.
 
 I played with designs and pictures; I certainly wanted to have all the pages vivid and funny but I tried to keep some consistent colors, e.g. the round slider and the footer. I tried to have the right contrast between background and other elements on the page.
 
@@ -158,7 +158,7 @@ The background colors and the patterns for other pages are the following:
 
 ### Typography
 
-Google font _'Hachi Maru Pop'_, used as a main font, looked fun and inviting. It has _sans-serif_ as a back fall.
+Google font _'Hachi Maru Pop'_, used as a main font, looked fun and inviting. It has _sans-serif_ as a fall back.
 
 ### Imagery
 
@@ -256,7 +256,7 @@ In the future, I would like:
 * Tested all buttons.
 * Tested the responsive behaviour of images and text on desktops, laptops, notebooks and various smartphones.
 * Tested the responsiveness of the page and 100vh height; there's no overlapping and no scroller introduced
-* Reduces and expanded the width of the window to verify that each memory card is distributed in expected way on all device sizes.
+* Reduces and expanded the width of the window to verify that each memory card is distributed in the expected way on all device sizes.
 * I identified and fixed the majority of problems that were affecting my site's performance, accessibility 
 and UX by using open-source Google tool **Lighthouse**. A day before submitting the milestone, performance of
 each page exceeded 80%.
