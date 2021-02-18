@@ -159,18 +159,6 @@ img {
 
 /* ------------------------MEDIA QUERIES----------------- */
 
-/* @media (max-width: 1366px) and (min-width: 1201px) {
-    .game-container {
-        position: absolute;
-        margin-top: 20px;
-        margin-right: 50px;
-        margin-left: 270px;
-        margin-right: 20px;
-        width: 45%;
-        z-index: 25;
-    }
-} */
-
 @media (max-width: 1200px) and (min-width: 992px) {
     .game-container {
         position: absolute;
@@ -247,6 +235,13 @@ img {
 @media (max-width: 575px) {
     body {
         display: block;
+    }
+
+    .game-container {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     #memory-main-container {
