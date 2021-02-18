@@ -16,7 +16,6 @@ body {
     justify-content: center;
     align-content: center;
     font-family: 'Hachi Maru Pop', cursive, sans-serif;
-    /* font-family: 'Yusei Magic', sans-serif; */
     background-color: var(--background-color);
     background-image: var(--background-image);
 }
@@ -103,7 +102,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    /* position: fixed; */
 }
 
 .memory-card {
@@ -139,45 +137,39 @@ img {
     backface-visibility: hidden;
 }
 
-
-
 .game-info-container {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
 }
 
-
 .game-info {
     color: white;
     font-size: 2em;
 }
 
-
-
 .game-container {
-
+    position: absolute;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 270px;
     margin-right: 20px;
-
-    width: 90%;
+    width: 45%;
+    z-index: 25;
 }
 
 /* ------------------------MEDIA QUERIES----------------- */
 
-@media (max-width: 1366px) and (min-width: 1201px) {
+/* @media (max-width: 1366px) and (min-width: 1201px) {
     .game-container {
         position: absolute;
         margin-top: 20px;
-        margin-left: 320px;
         margin-right: 50px;
-        /* margin-left: 0;
-        margin-right: 0; */
+        margin-left: 270px;
+        margin-right: 20px;
+        width: 45%;
         z-index: 25;
-        width: 50%;
     }
-}
+} */
 
 @media (max-width: 1200px) and (min-width: 992px) {
     .game-container {
@@ -185,8 +177,6 @@ img {
         margin-top: 20px;
         margin-left: 300px;
         margin-right: 30px;
-        /* margin-left: 0;
-        margin-right: 0; */
         z-index: 25;
         width: 62%;
     }
